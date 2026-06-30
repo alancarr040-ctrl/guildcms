@@ -184,6 +184,21 @@ function guildcms_engineering_publications(): array
             'summary' => 'Defines the Guild CMS product experience philosophy: explain before asking, teach instead of assuming, design for confidence, make recovery safe, and ensure the installer introduces the experience users should expect from the CMS.',
             'topics' => ['Educational design', 'Installer experience', 'Accessible workflows', 'Error guidance', 'Administrator confidence', 'Product identity'],
         ],
+        [
+            'id' => 'GCMS-ENG-012',
+            'publication' => 'Publication 12',
+            'volume' => 'Volume XII',
+            'title' => 'Installer Testing & Certification Framework',
+            'slug' => 'installer-testing-certification.php',
+            'status' => 'Published',
+            'version' => '1.0',
+            'phase' => '4.4.0-6',
+            'updated' => 'June 2026',
+            'applies_to' => 'Guild CMS Phase 4.4 installer development and release certification',
+            'category' => 'Quality Assurance',
+            'summary' => 'Defines installer testing, runtime support policy, certification environments, base and perfect expectations, failure recovery tests, UX validation, security checks, and release certification standards.',
+            'topics' => ['Installer testing', 'Certification environments', 'Runtime support', 'Failure recovery', 'Accessibility checks', 'Release certification'],
+        ],
     ];
 }
 

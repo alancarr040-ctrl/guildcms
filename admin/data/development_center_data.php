@@ -11,10 +11,10 @@ if (!defined('IN_PHPBB')) {
 }
 
 $guildcmsDevCenter = [
-    'version' => 'v0.4.5 Phase 4.4',
-    'current_phase' => 'Phase 4.4 - Installation & Bootstrap System',
-    'next_phase' => 'Phase 4.5 - Data Normalization & Governance',
-    'platform_direction' => 'Installable Product Bootstrap',
+    'version' => 'v0.4.3 Phase 4.3',
+    'current_phase' => 'Phase 4.3 - Engineering Foundation & Governance',
+    'next_phase' => 'Phase 4.4 - Installation & Bootstrap System',
+    'platform_direction' => 'Engineering Foundation',
 ];
 
 $guildcmsRoadmap = [
@@ -25,10 +25,9 @@ $guildcmsRoadmap = [
     ['title' => 'Phase 3C - Content Rendering Engine', 'status' => 'Complete', 'progress' => 100],
     ['title' => 'Phase 4.1 - Security Foundation', 'status' => 'Complete', 'progress' => 100],
     ['title' => 'Phase 4.2 - Security Hardening', 'status' => 'Complete', 'progress' => 100],
-    ['title' => 'Phase 4.3 - Engineering Foundation & Governance', 'status' => 'Complete', 'progress' => 100],
-    ['title' => 'Phase 4.4 - Installation & Bootstrap System', 'status' => 'In Progress', 'progress' => 45],
-    ['title' => 'Phase 4.5 - Data Normalization & Governance', 'status' => 'Planned', 'progress' => 0],
-    ['title' => 'Phase 4.6 - Upgrade & Migration Framework', 'status' => 'Planned', 'progress' => 0],
+    ['title' => 'Phase 4.3 - Engineering Foundation & Governance', 'status' => 'In Progress', 'progress' => 60],
+    ['title' => 'Phase 4.4 - Installation & Bootstrap System', 'status' => 'Planned', 'progress' => 0],
+    ['title' => 'Phase 4.5 - Upgrade & Migration Framework', 'status' => 'Planned', 'progress' => 0],
     ['title' => 'Phase 5.0 - Plugin SDK & Extension Framework', 'status' => 'Planned', 'progress' => 0],
     ['title' => 'Phase 5.1 - Theme Engine & Template System', 'status' => 'Planned', 'progress' => 0],
     ['title' => 'Phase 5.2 - CLI & Developer Tools', 'status' => 'Planned', 'progress' => 0],
@@ -171,6 +170,7 @@ $guildcmsEngineeringPublications = [
     ['id' => 'GCMS-ENG-009', 'publication' => 'Publication 9', 'volume' => 'Volume IX', 'title' => 'Architecture Decision Records', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.3.0-10', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'adr.php'],
     ['id' => 'GCMS-ENG-010', 'publication' => 'Publication 10', 'volume' => 'Volume X', 'title' => 'Engineering Roadmap & Publication Framework', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.3.0-11', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'future.php'],
     ['id' => 'GCMS-ENG-011', 'publication' => 'Publication 11', 'volume' => 'Volume XI', 'title' => 'User Experience & Educational Design Principles', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.4.0-3', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'user-experience.php'],
+    ['id' => 'GCMS-ENG-012', 'publication' => 'Publication 12', 'volume' => 'Volume XII', 'title' => 'Installer Testing & Certification Framework', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.4.0-6', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'installer-testing-certification.php'],
 ];
 
 function guildcms_count_backlog_items(array $backlog): int

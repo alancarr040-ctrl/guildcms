@@ -723,6 +723,16 @@ $engineering_publications = [
         'phase' => '4.4.0-3',
         'url' => $engineering_publications_base_url . 'user-experience.php',
     ],
+    [
+        'id' => 'GCMS-ENG-012',
+        'publication' => 'Publication 12',
+        'volume' => 'Volume XII',
+        'title' => 'Installer Testing & Certification Framework',
+        'status' => 'published',
+        'version' => '1.0',
+        'phase' => '4.4.0-6',
+        'url' => $engineering_publications_base_url . 'installer-testing-certification.php',
+    ],
 ];
 
 $engineering_publication_counts = [];
@@ -1652,7 +1662,7 @@ ksort($backlog_counts_by_priority);
         <div class="card bg-dark border-info text-light mb-3">
             <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
                 <strong>Guild CMS Engineering Publications</strong>
-                    <div class="small text-success mt-1">GCMS-ENG-000 through GCMS-ENG-011 are published. Volume I is complete and Volume XI now defines Guild CMS product experience principles.</div>
+                    <div class="small text-success mt-1">GCMS-ENG-000 through GCMS-ENG-012 are published. Volume XI defines product experience principles and Volume XII defines installer testing and certification standards.</div>
                 <span class="badge bg-info text-dark">Knowledge &bull; Architecture &bull; Standards</span>
             </div>
             <div class="card-body">
@@ -1718,7 +1728,7 @@ ksort($backlog_counts_by_priority);
                 <span class="badge bg-success">Complete</span>
             </div>
             <div class="card-body">
-                <p class="mb-3">Volume I of the Guild CMS Engineering Library has been reviewed as a complete foundational publication set. GCMS-ENG-011 extends the library into product experience, installer education, accessibility, and administrator confidence. The Development Center records the publication metadata and links to the public Guild CMS site as the authoritative source for each document.</p>
+                <p class="mb-3">Volume I of the Guild CMS Engineering Library has been reviewed as a complete foundational publication set. GCMS-ENG-011 extends the library into product experience, installer education, accessibility, and administrator confidence. GCMS-ENG-012 adds the installer testing and certification framework used to validate Phase 4.4 across clean environments. The Development Center records the publication metadata and links to the public Guild CMS site as the authoritative source for each document.</p>
                 <div class="row g-3">
                     <div class="col-md-3"><div class="border border-secondary rounded p-3 h-100"><div class="small text-secondary">Published Publications</div><div class="h4 mb-0"><?= (int) ($engineering_publication_counts['published'] ?? 0) ?>/<?= count($engineering_publications) ?></div></div></div>
                     <div class="col-md-3"><div class="border border-secondary rounded p-3 h-100"><div class="small text-secondary">Placeholder Count</div><div class="h4 mb-0"><?= (int) ($engineering_publication_counts['placeholder'] ?? 0) ?></div></div></div>

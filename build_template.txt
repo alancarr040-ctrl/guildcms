@@ -1,0 +1,28 @@
+Continue Guild CMS development.
+Current Phase: Phase X.X – Phase Name
+Current Package: X.X.X-X
+Deliverable: Deliverable Name
+Build against the current GitHub baseline (admin/, guildcms/, and devsite/).
+Requirements:
+Modify the actual source code as required.
+Build and test against the current project structure.
+Update devsite (installable product) where applicable.
+Update the Guild CMS public website.
+Update the Development Center.
+Update the Engineering Library if required.
+Update the Roadmap.
+Update the Timeline.
+Update the Journal.
+Update the Changelog.
+Produce schema-compatible SQL migrations using the current project database schema.
+Include README, Release Notes, Implementation Guide, and Security Review.
+Run PHP syntax validation on all modified PHP files.
+Produce a ZIP containing only the changed files, preserving the existing project folder layout:
+admin/
+guildcms/
+devsite/
+sql/
+release documentation
+Use the current GitHub repository as the authoritative source baseline.
+If implementation requires modifying existing files, edit those files rather than creating standalone examples or placeholder files.
+Do not stop at planning or discussion. Implement the package completely and return the ZIP when finished.
