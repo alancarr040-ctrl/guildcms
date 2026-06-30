@@ -23,6 +23,10 @@ spl_autoload_register(static function (string $class): void {
         GUILDCMS_INSTALLER_ROOT . '/steps/' . $relative . '.php',
     ];
 
+    if (str_starts_with($relative, 'Steps/')) {
+        $paths[] = GUILDCMS_INSTALLER_ROOT . '/steps/' . substr($relative, 6) . '.php';
+    }
+
     foreach ($paths as $path) {
         if (is_file($path)) {
             require_once $path;
