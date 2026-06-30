@@ -34,7 +34,7 @@ Guild CMS certifies environments, not paid hosting panels. Control panels provis
 
 Tier 1 certification targets:
 
-- Rocky Linux 9, Virtualmin, Apache, PHP-FPM, MariaDB, PHP 8.2+
+- Rocky Linux 9, native package manager deployment, Apache, PHP-FPM, MariaDB, PHP 8.2+
 - Ubuntu Server 24.04 LTS, Apache, PHP-FPM, MariaDB, PHP 8.2+
 
 Tier 2 targets:
@@ -101,7 +101,7 @@ Sensitive values must not be displayed, logged, committed, or left in world-read
 ## Release Certification Checklist
 
 - Development environment smoke test completed
-- Clean Rocky Linux / Virtualmin installation test completed
+- Clean Rocky Linux / native package manager deployment installation test completed
 - Ubuntu installation test completed when available
 - Required checks pass or block with educational guidance
 - Recommended checks warn without blocking
@@ -112,3 +112,10 @@ Sensitive values must not be displayed, logged, committed, or left in world-read
 ## Certification Records
 
 The Development Center should record installer certification results by package, environment, PHP version, database, result, and known issues. Phase 4.5 data normalization should later formalize these records into a structured certification dashboard.
+
+
+## Package 4.4.0-8 Addendum: Platform Intelligence
+
+Installer certification now includes environment detection validation. The installer records operating system, package manager family, web server reporting, PHP runtime details, database drivers, filesystem readiness, HTTPS status, and Linux security controls before later steps rely on that information.
+
+Guild CMS certifies operating system environments rather than paid control panels. Control panels may remain compatible when they provision supported runtimes, but the certification target is the environment created by the operating system and package manager.

@@ -17,6 +17,7 @@ final class InstallerState
                 'completed_steps' => [],
                 'saved_at' => null,
                 'cancelled_at' => null,
+                'environment' => null,
             ];
         }
 
@@ -52,6 +53,26 @@ final class InstallerState
         return is_string($savedAt) ? $savedAt : null;
     }
 
+    /** @param array<string,mixed> $environment */
+    public function setEnvironmentSnapshot(array $environment): void
+    {
+        $this->session['environment'] = $environment;
+        $this->session['environment_detected_at'] = gmdate('c');
+    }
+
+    /** @return array<string,mixed>|null */
+    public function environmentSnapshot(): ?array
+    {
+        $environment = $this->session['environment'] ?? null;
+        return is_array($environment) ? $environment : null;
+    }
+
+    public function environmentDetectedAt(): ?string
+    {
+        $detectedAt = $this->session['environment_detected_at'] ?? null;
+        return is_string($detectedAt) ? $detectedAt : null;
+    }
+
     public function cancel(): void
     {
         $this->session = [
@@ -59,6 +80,9 @@ final class InstallerState
             'completed_steps' => [],
             'saved_at' => null,
             'cancelled_at' => gmdate('c'),
+            'environment' => null,
+            'environment_detected_at' => null,
         ];
     }
 }
+

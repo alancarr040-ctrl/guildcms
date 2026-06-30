@@ -19,8 +19,8 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-7">
                 <div class="guild-card p-4 h-100">
                     <h2 class="h4">Installer framework purpose</h2>
-                    <p class="guild-muted">Package 4.4.0-2 establishes the first functional framework for the future Guild CMS installer. It provides routing, step registration, a shared layout, session-backed state, and placeholder steps without yet performing database writes or configuration generation.</p>
-                    <p class="guild-muted mb-0">Future Phase 4.4 packages will replace the placeholders with requirements checks, configuration writing, database bootstrap, administrator creation, installer locking, and final health verification.</p>
+                    <p class="guild-muted">Package 4.4.0-8 adds platform intelligence to the installer. Guild CMS now detects the operating system, web server, PHP runtime, database drivers, filesystem permissions, HTTPS status, and Linux security controls before later steps ask for configuration details.</p>
+                    <p class="guild-muted mb-0">Future Phase 4.4 packages will use this detected environment to provide better guidance for requirements, database setup, configuration generation, administrator creation, installer locking, and final health verification.</p>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -28,7 +28,8 @@ require __DIR__ . '/includes/header.php';
                     <h2 class="h4">Framework steps</h2>
                     <ol class="guild-muted mb-0">
                         <li>Welcome</li>
-                        <li>Requirements</li>
+                        <li>Environment Detection</li>
+                        <li>System Readiness</li>
                         <li>License</li>
                         <li>Database</li>
                         <li>Configuration</li>
@@ -37,6 +38,12 @@ require __DIR__ . '/includes/header.php';
                     </ol>
                 </div>
             </div>
+        </div>
+
+        <div class="guild-card p-4 mt-4">
+            <h2 class="h4">Platform intelligence</h2>
+            <p class="guild-muted">The installer identifies the server before it validates requirements. This lets Guild CMS explain fixes in the language of the platform, such as <code>dnf</code> guidance for Rocky and AlmaLinux or <code>apt</code> guidance for Ubuntu and Debian.</p>
+            <p class="guild-muted mb-0">Detection currently covers operating system, web server, PHP runtime, loaded PHP extensions, database drivers, filesystem readiness, HTTPS, SELinux, and AppArmor.</p>
         </div>
 
 
@@ -57,7 +64,7 @@ require __DIR__ . '/includes/header.php';
                     </div>
                 </div>
             </div>
-            <p class="guild-muted mt-3 mb-0">Current certification planning targets Rocky Linux 9 with Virtualmin and Ubuntu Server 24.04, with PHP 8.2 as the minimum supported runtime for the current development cycle.</p>
+            <p class="guild-muted mt-3 mb-0">Current certification planning targets minimal Rocky Linux 9, AlmaLinux 9, Ubuntu Server 24.04, and Debian 12 environments installed through native package managers such as dnf or apt. Hosting panels may be compatible, but Guild CMS certifies operating system environments rather than paid control panels.</p>
         </div>
 
         <div class="guild-card p-4 mt-4">

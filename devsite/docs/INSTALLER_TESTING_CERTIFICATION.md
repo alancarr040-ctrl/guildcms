@@ -34,13 +34,13 @@ Guild CMS certifies environments, not paid hosting panels. Control panels provis
 
 Tier 1 certification targets:
 
-- Rocky Linux 9, Virtualmin, Apache, PHP-FPM, MariaDB, PHP 8.2+
-- Ubuntu Server 24.04 LTS, Apache, PHP-FPM, MariaDB, PHP 8.2+
+- Rocky Linux 9 minimal, Apache or PHP-FPM deployment, MariaDB, PHP 8.2+
+- Ubuntu Server 24.04 LTS minimal, Apache or PHP-FPM deployment, MariaDB, PHP 8.2+
 
 Tier 2 targets:
 
-- AlmaLinux 9
-- Debian 12
+- AlmaLinux 9 minimal
+- Debian 12 minimal
 
 Tier 3 future targets:
 
@@ -101,7 +101,7 @@ Sensitive values must not be displayed, logged, committed, or left in world-read
 ## Release Certification Checklist
 
 - Development environment smoke test completed
-- Clean Rocky Linux / Virtualmin installation test completed
+- Clean Rocky Linux installation test completed
 - Ubuntu installation test completed when available
 - Required checks pass or block with educational guidance
 - Recommended checks warn without blocking
@@ -112,3 +112,19 @@ Sensitive values must not be displayed, logged, committed, or left in world-read
 ## Certification Records
 
 The Development Center should record installer certification results by package, environment, PHP version, database, result, and known issues. Phase 4.5 data normalization should later formalize these records into a structured certification dashboard.
+
+
+## Platform Intelligence Validation
+
+Beginning with Package 4.4.0-8, the installer records an environment snapshot before the system readiness checks. Certification tests should verify that the installer correctly identifies:
+
+- Linux distribution and version from `/etc/os-release` when available
+- Package manager family (`dnf`, `apt`, or unknown)
+- Apache, Nginx, LiteSpeed, or unknown web server reporting
+- PHP version, SAPI, limits, timezone, and loaded extensions
+- MySQLi and PDO MySQL availability
+- Writable configuration target paths
+- HTTPS request detection
+- SELinux and AppArmor presence when visible to PHP
+
+The installer should use this information to teach the administrator what was found and to tailor later guidance without writing permanent configuration during detection.

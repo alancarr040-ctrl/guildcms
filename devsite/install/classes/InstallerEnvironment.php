@@ -11,9 +11,9 @@ final class InstallerEnvironment
         return [
             self::check(
                 'PHP Version',
-                version_compare(PHP_VERSION, '8.1.0', '>='),
-                'Guild CMS requires PHP 8.1 or newer for modern language features, security updates, and predictable runtime behavior.',
-                'Ask your hosting provider to switch this site to PHP 8.1 or newer before continuing.',
+                version_compare(PHP_VERSION, '8.2.0', '>='),
+                'Guild CMS requires PHP 8.2 or newer for the supported installation path, current security posture, and predictable runtime behavior.',
+                self::phpUpgradeGuidance(),
                 'Current PHP version: ' . PHP_VERSION
             ),
             self::check(
@@ -147,6 +147,20 @@ final class InstallerEnvironment
             'fix' => $fix,
             'detail' => $detail,
         ];
+    }
+
+
+    private static function phpUpgradeGuidance(): string
+    {
+        $platform = InstallerPlatform::detect();
+        $manager = (string) ($platform['package_manager'] ?? 'unknown');
+        if ($manager === 'dnf') {
+            return 'Switch this site to PHP 8.2 or newer. On Rocky Linux or AlmaLinux, use the PHP 8.2 AppStream module or the PHP packages supplied by your server policy, then restart Apache/PHP-FPM.';
+        }
+        if ($manager === 'apt') {
+            return 'Switch this site to PHP 8.2 or newer. On Ubuntu or Debian, install the supported PHP packages for this virtual host, then restart Apache/PHP-FPM.';
+        }
+        return 'Ask your hosting provider or server administrator to switch this site to PHP 8.2 or newer before continuing.';
     }
 
     private static function sessionStatusLabel(): string

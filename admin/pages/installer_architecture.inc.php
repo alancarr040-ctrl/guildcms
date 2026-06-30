@@ -18,6 +18,7 @@ if (!function_exists('guildcms_installer_h')) {
 
 $installerSteps = [
     'Welcome',
+    'Environment Detection',
     'System Readiness',
     'Recommended Features',
     'License',
@@ -34,13 +35,13 @@ $installerSteps = [
 
 <section class="dev-center-section">
     <h1>Installer Architecture</h1>
-    <p class="lead">Package 4.4.0-4 begins the first real installer experience inside the devsite installable product tree.</p>
+    <p class="lead">Phase 4.4 now includes platform intelligence so the installer can identify the server environment before validating requirements or asking configuration questions.</p>
 
     <div class="card bg-dark text-light border-info mb-4">
         <div class="card-body">
             <div class="small text-info text-uppercase fw-semibold mb-2">Phase 4.4 - Installation &amp; Bootstrap System</div>
-            <h2 class="h4">First Installer Experience</h2>
-            <p class="mb-0">The installable product now detects an unconfigured site and explains how to begin setup instead of failing with PHP or database errors.</p>
+            <h2 class="h4">Installer Environment Detection</h2>
+            <p class="mb-0">Package 4.4.0-8 adds operating system, web server, PHP, database driver, filesystem, HTTPS, SELinux, and AppArmor detection so later installer steps can give accurate platform-specific guidance.</p>
         </div>
     </div>
 
@@ -51,6 +52,7 @@ $installerSteps = [
                 <div class="card-body">
                     <ul class="mb-0">
                         <li>Explain before asking.</li>
+                        <li>Detect the platform before validating requirements.</li>
                         <li>Check required environment needs early.</li>
                         <li>Separate required checks from recommended features.</li>
                         <li>Allow back, save, cancel, refresh, and resume.</li>
@@ -77,7 +79,7 @@ $installerSteps = [
     <div class="card bg-dark text-light border-secondary mt-4">
         <div class="card-header">Product Separation Boundary</div>
         <div class="card-body">
-            <p class="mb-0">The public Guild CMS site documents the installer. The devsite tree contains the executable installer and is the installable product baseline.</p>
+            <p class="mb-0">The public Guild CMS site documents the installer. The Development Center records the engineering and testing standards. The devsite tree contains the executable installer and is the installable product baseline.</p>
         </div>
     </div>
 </section>

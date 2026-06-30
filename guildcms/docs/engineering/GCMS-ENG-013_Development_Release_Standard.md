@@ -96,3 +96,8 @@ Git is the authoritative project history. Generated packages are applied to loca
 ## Package Manifest Requirement
 
 Every package must include a manifest listing package number, deliverable, changed files, SQL files, PHP syntax checks, affected tables, expected validation, and recommended Git commit message.
+
+
+## Package 4.4.0-8 Addendum: Environment-Aware Installer Packages
+
+Installer implementation packages that add platform behavior must update the installer testing references and include validation notes for clean operating system environments. Packages should avoid assuming a hosting control panel. When platform-specific guidance is needed, it should be derived from detected operating system and package manager data.
