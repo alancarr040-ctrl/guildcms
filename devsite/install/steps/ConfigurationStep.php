@@ -10,10 +10,10 @@ final class ConfigurationStep extends AbstractInstallerStep
 {
     public function key(): string { return 'configuration'; }
     public function title(): string { return 'Configuration'; }
-    public function summary(): string { return 'Prepare site configuration generation.'; }
+    public function summary(): string { return 'Prepare the generated configuration file.'; }
 
     public function render(Installer $installer): string
     {
-        return $this->panel('<h2>Configuration Placeholder</h2>' . $this->paragraph('The configuration writer will eventually generate installation-specific settings without exposing sensitive source-site values.'));
+        return $this->panel('<h2>Create the site configuration</h2>' . $this->paragraph('The installer will generate includes/config.inc.php. Guild CMS does not expect a new administrator to hand-write that file.') . $this->help('Why not ship a completed config file?', 'A completed configuration belongs to one installation. Shipping one would be confusing and could expose source-site assumptions.'));
     }
 }

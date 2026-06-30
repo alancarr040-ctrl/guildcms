@@ -15,6 +15,8 @@ final class InstallerState
             $session['guildcms_installer'] = [
                 'started_at' => gmdate('c'),
                 'completed_steps' => [],
+                'saved_at' => null,
+                'cancelled_at' => null,
             ];
         }
 
@@ -37,5 +39,26 @@ final class InstallerState
         if (!$this->isComplete($step)) {
             $this->session['completed_steps'][] = $step;
         }
+    }
+
+    public function save(): void
+    {
+        $this->session['saved_at'] = gmdate('c');
+    }
+
+    public function savedAt(): ?string
+    {
+        $savedAt = $this->session['saved_at'] ?? null;
+        return is_string($savedAt) ? $savedAt : null;
+    }
+
+    public function cancel(): void
+    {
+        $this->session = [
+            'started_at' => gmdate('c'),
+            'completed_steps' => [],
+            'saved_at' => null,
+            'cancelled_at' => gmdate('c'),
+        ];
     }
 }

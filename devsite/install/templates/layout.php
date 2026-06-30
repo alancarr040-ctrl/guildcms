@@ -10,6 +10,8 @@ use GuildCMS\Installer\InstallerView;
 $currentKey = $step->key();
 $previousKey = $installer->previousStepKey($currentKey);
 $nextKey = $installer->nextStepKey($currentKey);
+$percent = $installer->progressPercent($currentKey);
+$savedAt = $installer->state()->savedAt();
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -21,9 +23,16 @@ $nextKey = $installer->nextStepKey($currentKey);
 <body>
 <div class="install-shell">
     <header class="install-header">
-        <div class="install-kicker">Guild CMS Installation</div>
+        <div class="install-kicker">Guild CMS Installation Wizard</div>
         <h1><?= InstallerView::escape($step->title()) ?></h1>
         <p><?= InstallerView::escape($step->summary()) ?></p>
+        <div class="install-progress-wrap" aria-label="Installation progress">
+            <div class="install-progress-label">Step <?= $installer->position($currentKey) ?> of <?= $installer->count() ?> · <?= $percent ?>%</div>
+            <div class="install-progress"><span style="width: <?= $percent ?>%;"></span></div>
+        </div>
+        <?php if ($savedAt !== null): ?>
+            <p class="install-saved">Progress saved at <?= InstallerView::escape($savedAt) ?> UTC.</p>
+        <?php endif; ?>
     </header>
 
     <div class="install-layout">
@@ -41,16 +50,20 @@ $nextKey = $installer->nextStepKey($currentKey);
 
             <div class="install-actions">
                 <?php if ($previousKey !== null): ?>
-                    <a class="button button-secondary" href="?step=<?= InstallerView::escape($previousKey) ?>">Previous</a>
+                    <a class="button button-secondary" href="?step=<?= InstallerView::escape($previousKey) ?>">Back</a>
                 <?php else: ?>
                     <span></span>
                 <?php endif; ?>
 
-                <?php if ($nextKey !== null): ?>
-                    <a class="button" href="?step=<?= InstallerView::escape($nextKey) ?>">Next</a>
-                <?php else: ?>
-                    <a class="button" href="../">Return to site</a>
-                <?php endif; ?>
+                <div class="install-action-group">
+                    <a class="button button-secondary" href="?step=<?= InstallerView::escape($currentKey) ?>&amp;action=save">Save</a>
+                    <a class="button button-secondary" href="?step=welcome&amp;action=cancel">Cancel</a>
+                    <?php if ($nextKey !== null): ?>
+                        <a class="button" href="?step=<?= InstallerView::escape($nextKey) ?>">Continue</a>
+                    <?php else: ?>
+                        <a class="button" href="../">Visit site</a>
+                    <?php endif; ?>
+                </div>
             </div>
         </main>
     </div>

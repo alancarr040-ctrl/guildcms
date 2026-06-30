@@ -58,6 +58,27 @@ final class Installer
         return $keys[$index - 1];
     }
 
+    public function position(string $current): int
+    {
+        $keys = array_keys($this->steps);
+        $index = array_search($current, $keys, true);
+        return $index === false ? 1 : $index + 1;
+    }
+
+    public function count(): int
+    {
+        return count($this->steps);
+    }
+
+    public function progressPercent(string $current): int
+    {
+        if ($this->count() < 1) {
+            return 0;
+        }
+
+        return (int) round(($this->position($current) / $this->count()) * 100);
+    }
+
     public function render(?string $stepKey = null): string
     {
         $stepKey = $stepKey ?: $this->firstStepKey();

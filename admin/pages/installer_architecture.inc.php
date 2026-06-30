@@ -1,7 +1,7 @@
 <?php
 /**
  * Guild CMS Installer Architecture
- * Package 4.4.0-1
+ * Package 4.4.0-4
  */
 
 $devCenterData = __DIR__ . '/../data/development_center_data.php';
@@ -16,48 +16,57 @@ if (!function_exists('guildcms_installer_h')) {
     }
 }
 
-$installerArchitecture = $guildcmsInstallerArchitecture ?? [
-    'package' => '4.4.0-1',
-    'title' => 'Installation Architecture',
-    'status' => 'Defined',
-    'summary' => 'Installer architecture metadata is unavailable.',
-    'principles' => [],
-    'stages' => [],
+$installerSteps = [
+    'Welcome',
+    'System Readiness',
+    'Recommended Features',
+    'License',
+    'Database',
+    'Configuration',
+    'Administration',
+    'Site Settings',
+    'Modules',
+    'Summary',
+    'Install',
+    'Complete',
 ];
 ?>
 
 <section class="dev-center-section">
     <h1>Installer Architecture</h1>
-    <p class="lead">Package <?= guildcms_installer_h($installerArchitecture['package'] ?? '') ?> defines the installation architecture for Guild CMS before executable installer workflows are built.</p>
+    <p class="lead">Package 4.4.0-4 begins the first real installer experience inside the devsite installable product tree.</p>
 
     <div class="card bg-dark text-light border-info mb-4">
         <div class="card-body">
             <div class="small text-info text-uppercase fw-semibold mb-2">Phase 4.4 - Installation &amp; Bootstrap System</div>
-            <h2 class="h4"><?= guildcms_installer_h($installerArchitecture['title'] ?? '') ?></h2>
-            <p class="mb-0"><?= guildcms_installer_h($installerArchitecture['summary'] ?? '') ?></p>
+            <h2 class="h4">First Installer Experience</h2>
+            <p class="mb-0">The installable product now detects an unconfigured site and explains how to begin setup instead of failing with PHP or database errors.</p>
         </div>
     </div>
 
     <div class="row g-3">
         <div class="col-lg-6">
             <div class="card bg-dark text-light border-secondary h-100">
-                <div class="card-header">Architecture Principles</div>
+                <div class="card-header">Installer Experience Principles</div>
                 <div class="card-body">
                     <ul class="mb-0">
-                        <?php foreach (($installerArchitecture['principles'] ?? []) as $principle): ?>
-                            <li><?= guildcms_installer_h($principle) ?></li>
-                        <?php endforeach; ?>
+                        <li>Explain before asking.</li>
+                        <li>Check required environment needs early.</li>
+                        <li>Separate required checks from recommended features.</li>
+                        <li>Allow back, save, cancel, refresh, and resume.</li>
+                        <li>Do not write permanent changes until the Install step.</li>
+                        <li>Errors should teach, reassure, and explain recovery.</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="card bg-dark text-light border-secondary h-100">
-                <div class="card-header">Installer Stage Model</div>
+                <div class="card-header">Installer Step Model</div>
                 <div class="card-body">
                     <ol class="mb-0">
-                        <?php foreach (($installerArchitecture['stages'] ?? []) as $stage): ?>
-                            <li><?= guildcms_installer_h($stage) ?></li>
+                        <?php foreach ($installerSteps as $step): ?>
+                            <li><?= guildcms_installer_h($step) ?></li>
                         <?php endforeach; ?>
                     </ol>
                 </div>
@@ -66,9 +75,9 @@ $installerArchitecture = $guildcmsInstallerArchitecture ?? [
     </div>
 
     <div class="card bg-dark text-light border-secondary mt-4">
-        <div class="card-header">Boundary Decision</div>
+        <div class="card-header">Product Separation Boundary</div>
         <div class="card-body">
-            <p class="mb-0">The Phase 4.4 installer targets the reusable Guild CMS product. The public Guild CMS information site remains a documentation and branding reference and is not the install target.</p>
+            <p class="mb-0">The public Guild CMS site documents the installer. The devsite tree contains the executable installer and is the installable product baseline.</p>
         </div>
     </div>
 </section>

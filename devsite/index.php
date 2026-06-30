@@ -2,10 +2,11 @@
 declare(strict_types=1);
 
 /*
- * Only allow methods the public site actually supports.
- * This prevents unsupported verbs such as PUT, PATCH, DELETE, TRACE, etc.
- * from rendering a normal 200 OK page through the router.
+ * Guild CMS front controller
+ * Package 4.4.0-4 introduces setup detection so a new installable tree
+ * explains missing configuration instead of failing with PHP/database errors.
  */
+
 $allowed_methods = ['GET', 'POST', 'HEAD'];
 
 if (!in_array($_SERVER['REQUEST_METHOD'] ?? 'GET', $allowed_methods, true)) {
@@ -13,6 +14,49 @@ if (!in_array($_SERVER['REQUEST_METHOD'] ?? 'GET', $allowed_methods, true)) {
     header('Allow: GET, POST, HEAD');
     header('Content-Type: text/plain; charset=UTF-8');
     echo 'Method Not Allowed';
+    exit;
+}
+
+$config_file = __DIR__ . '/includes/config.inc.php';
+$installer_index = __DIR__ . '/install/index.php';
+
+/**
+ * The installer will eventually generate includes/config.inc.php.
+ * While Guild CMS is still uninstalled, the site must teach the administrator
+ * what is missing and how to continue instead of producing a fatal error.
+ */
+function guildcms_config_appears_unconfigured(string $config_file): bool
+{
+    if (!is_file($config_file) || !is_readable($config_file)) {
+        return true;
+    }
+
+    $contents = (string) file_get_contents($config_file);
+
+    $placeholders = [
+        'your_db',
+        'your_db_user',
+        'your_db_pass',
+        'www.yoursite.com',
+        '/home/theregs/public_html',
+    ];
+
+    foreach ($placeholders as $placeholder) {
+        if (str_contains($contents, $placeholder)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+if (guildcms_config_appears_unconfigured($config_file)) {
+    require __DIR__ . '/includes/setup_required.php';
+    exit;
+}
+
+if (!is_file(__DIR__ . '/forums/common.php')) {
+    require __DIR__ . '/includes/setup_required.php';
     exit;
 }
 
@@ -30,7 +74,7 @@ $user->session_begin(false);
 $auth->acl($user->data);
 $user->setup();
 
-require_once __DIR__ . '/includes/config.inc.php';
+require_once $config_file;
 require_once __DIR__ . '/includes/db_functions.php';
 
 global $request, $DB_HOST, $DB_NAME, $DB_USER, $DB_PASS;
@@ -76,21 +120,8 @@ if ($site) {
 <main class="col-md-8 text-light text-center">
     <div class="card bg-dark border-secondary text-light my-4">
         <div class="card-body">
-            <img
-                src="//cdn.theregs.org/images/404.webp"
-                alt="Error 404 - File Not Found"
-                class="img-fluid rounded mb-3"
-                style="max-width:260px;"
-            >
-
-            <p><strong>Your file cannot be found!</strong></p>
-
-            <p class="mb-0">
-                It's all a conspiracy.<br>
-                We're hiding everything from you...<br>
-                Or maybe the file doesn't actually exist.<br>
-                hmmm....
-            </p>
+            <p><strong>Your file cannot be found.</strong></p>
+            <p class="mb-0">The requested Guild CMS page does not exist.</p>
         </div>
     </div>
 </main>

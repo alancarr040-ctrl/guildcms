@@ -15,8 +15,22 @@ abstract class AbstractInstallerStep implements InstallerStepInterface
         return '<p>' . InstallerView::escape($text) . '</p>';
     }
 
+    protected function help(string $title, string $body): string
+    {
+        return '<details class="install-help"><summary>' . InstallerView::escape($title) . '</summary><p>' . InstallerView::escape($body) . '</p></details>';
+    }
+
+    protected function list(array $items): string
+    {
+        $out = '<ul class="install-list">';
+        foreach ($items as $item) {
+            $out .= '<li>' . InstallerView::escape((string) $item) . '</li>';
+        }
+        return $out . '</ul>';
+    }
+
     public function status(): string
     {
-        return 'Framework';
+        return 'Ready';
     }
 }
