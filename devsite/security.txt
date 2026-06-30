@@ -1,0 +1,8 @@
+# Our Security Address
+Contact: mailto:security@yoursite.com
+
+# Our Security Policy
+Policy: https://www.yoursite.com/security-policy/
+
+# Our Security Acknowledgements page
+

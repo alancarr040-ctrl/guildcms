@@ -1,0 +1,22 @@
+/* TheRegs Shared Sidebar Renderer - Version 1.0 */
+.sidebar-subheading {
+    background: rgba(0, 0, 0, .55);
+    border-left: 3px solid #777;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    color: #dcdcdc !important;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    padding: .35rem .5rem;
+    margin: .5rem 0 .25rem;
+}
+
+.sidebar-subheading-active {
+    border-left-color: #ffc107;
+    color: #ffffff !important;
+}
+
+.sidebar-sublink {
+    margin-left: 14px;
+    width: calc(100% - 14px) !important;
+    font-size: .9rem;
+}

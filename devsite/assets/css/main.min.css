@@ -1,0 +1,56 @@
+
+aside.col-md-2 {
+  min-width: 200px;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-nav {
+  padding-right: 1rem;
+  word-break: break-word;
+  font-size: 0.95rem;
+}
+html { border: 0; padding: 0; margin: 0; }
+body {
+  background: url('/assets/img/site_back.webp') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.map-of-dereth, .map512, .dtrp, .rhino-dr, .thefringe2, 
+.rs, .dr, .acfrozen, .dwnld
+{ display: inline-block; background: url('/images/ac/acsitesprite.webp') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; border-radius: 8px;}
+ 
+.map-of-dereth { background-position: -5px -0px; width: 600px; height: 600px; border-radius: 8px;}
+.map512 { background-position: -5px -605px; width: 512px; height: 512px; border-radius: 8px;}
+.dtrp { background-position: -5px -1122px; width: 500px; height: 150px; border-radius: 8px;}
+.rhino-dr { background-position: -5px -1277px; width: 250px; height: 105px; border-radius: 8px;}
+.thefringe2 { background-position: -260px -1277px; width: 239px; height: 55px; border-radius: 8px;}
+.rs { background-position: -260px -1337px; width: 186px; height: 150px; border-radius: 8px;}
+.dr { background-position: -451px -1337px; width: 110px; height: 97px; border-radius: 8px;}
+.acfrozen { background-position: -510px -1122px; width: 80px; height: 80px; border-radius: 8px;}
+.dwnld { background-position: -522px -605px; width: 16px; height: 16px; }

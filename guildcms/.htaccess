@@ -1,0 +1,14 @@
+Options -Indexes
+
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^roadmap/?$ roadmap.php [L]
+RewriteRule ^timeline/?$ timeline.php [L]
+RewriteRule ^release-history/?$ release-history.php [L]
+RewriteRule ^changelog/?$ changelog.php [L]
+RewriteRule ^vision/?$ vision.php [L]
+RewriteRule ^docs/?$ docs.php [L]
+</IfModule>

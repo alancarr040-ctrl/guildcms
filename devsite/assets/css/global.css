@@ -1,0 +1,239 @@
+/* Body tag information */
+html { width: 99%; border: 0; padding: 0; margin: 0; }
+body { padding: 0; margin: 0; width: 100%; min-width: 960px; overflow: auto; }
+#dummy-element { width: 2px; }
+img { border: 0; border-radius: 8px; /* Add rounded corners to images */}
+#head { width: 100%; min-height: 120px; margin: 0; border-radius: 8px; /* Add rounded corners to header */}
+#logo1 { width: 25%; position: relative; float: left; padding: 2px; margin-left: 0px; margin-bottom: 0px; border-radius: 8px; /* Add rounded corners to logo */}
+#headspace { width: 25%; }
+#search { width: 25%; min-height: 120px; position: relative; float: right; padding: 2px; margin-left: 0px; margin-bottom: 0px; border-radius: 8px; /* Add rounded corners to search */ }
+#top_menu { min-height: 20px; border-radius: 8px; /* Add rounded corners to top menu */}
+ul.topnav { margin: 0; padding: 0; }
+#head { width: 100%; min-height: 120px; margin: 0; border-radius: 8px; /* Add rounded corners to head */}
+#logo1 { width: 25%; position: relative; float: left; padding: 2px; margin-left: 0px; margin-bottom: 0px; border-radius: 8px; /* Add rounded corners to logo */ }
+#search { width: 25%; min-height: 120px; position: relative; float: right; padding: 2px; margin-left: 0px; margin-bottom: 0px; border-radius: 8px; /* Add rounded corners to search */ }
+#menupage { float: left; position: absolute; width: 175px; top: 160px; border-radius: 8px; /* Add rounded corners to menu page */ }
+ul.leftmenu { margin: 0; padding: 0; }
+
+.footerWrap { width: 100%; position: fixed; bottom: 0px; border-radius: 8px; /* Add rounded corners to footer wrap */ }
+#wrap { min-height: 100%; width: 100%; border-radius: 8px; /* Add rounded corners to wrap */ }
+.post { border-radius: 8px; /* Add rounded corners to posts */ }
+
+#clear{clear:both;}
+#clear1{clear:both;}
+#clear2{clear:both;}
+#clear3{clear:both;}
+.center{text-align:center;display:block;margin-right:auto;margin-left:auto;}
+.submenu{margin-bottom:0.5em; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.imageblock {height: 100px; width: 100px; border-radius: 8px; /* Add rounded corners to location and label */}
+.title, .sitelogo2
+{ display: inline-block; background: url('/images/siteimages.webp') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; border-radius: 8px; /* Add rounded corners to location and label */}
+ 
+.title {display: block; margin: auto; background-position: -5px -0px; width: 620px; height: 97px; border-radius: 8px; /* Add rounded corners to location and label */ }
+.sitelogo2 { background-position: -5px -102px; width: 113px; height: 113px; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.off-line2, .offline2, .on-line2, .valid-xhtml10, .vcss, 
+.button-rss-20, .button-xml-rss, .rss-news, .closelabel, .sitemaprss20, 
+.offline, .online, .next, .prev, .rss, 
+.feed-icon, .close, .commenticon, .pplicon, .blank, 
+.spacer
+{ display: inline-block; background: url('/images/siteicon.webp') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; border-radius: 8px; /* Add rounded corners to location and label */}
+ 
+.off-line2 { background-position: -5px -0px; width: 100px; height: 20px; border-radius: 8px; /* Add rounded corners to location and label */}
+.offline2 { background-position: -5px -25px; width: 100px; height: 20px; border-radius: 8px; /* Add rounded corners to location and label */}
+.on-line2 { background-position: -5px -50px; width: 100px; height: 20px; border-radius: 8px; /* Add rounded corners to location and label */}
+.valid-xhtml10 { background-position: -5px -75px; width: 88px; height: 31px; border-radius: 8px; /* Add rounded corners to location and label */}
+.vcss { background-position: -5px -111px; width: 88px; height: 31px; border-radius: 8px; /* Add rounded corners to location and label */}
+.button-rss-20 { background-position: -5px -147px; width: 80px; height: 15px; border-radius: 8px; /* Add rounded corners to location and label */}
+.button-xml-rss { background-position: -5px -167px; width: 72px; height: 14px; border-radius: 8px; /* Add rounded corners to location and label */}
+.rss-news { background-position: -5px -186px; width: 70px; height: 15px; border-radius: 8px; /* Add rounded corners to location and label */}
+.closelabel { background-position: -5px -206px; width: 66px; height: 22px; border-radius: 8px; /* Add rounded corners to location and label */}
+.sitemaprss20 { background-position: -5px -233px; width: 26px; height: 15px; border-radius: 8px; /* Add rounded corners to location and label */}
+.offline { background-position: -80px -186px; width: 19px; height: 19px; border-radius: 8px; /* Add rounded corners to location and label */}
+.online { background-position: -76px -210px; width: 19px; height: 19px; border-radius: 8px; /* Add rounded corners to location and label */}
+.next { background-position: -36px -233px; width: 15px; height: 23px; border-radius: 8px; /* Add rounded corners to location and label */}
+.prev { background-position: -56px -233px; width: 15px; height: 23px; border-radius: 8px; /* Add rounded corners to location and label */}
+.rss { background-position: -82px -167px; width: 15px; height: 15px; border-radius: 8px; /* Add rounded corners to location and label */}
+.feed-icon { background-position: -76px -234px; width: 13px; height: 13px; border-radius: 8px; /* Add rounded corners to location and label */}
+.close { background-position: -76px -252px; width: 12px; height: 12px; border-radius: 8px; /* Add rounded corners to location and label */}
+.commenticon { background-position: -90px -147px; width: 9px; height: 8px; border-radius: 8px; /* Add rounded corners to location and label */}
+.pplicon { background-position: -93px -252px; width: 7px; height: 9px; border-radius: 8px; /* Add rounded corners to location and label */}
+.blank { background-position: -98px -75px; width: 1px; height: 1px; border-radius: 8px; /* Add rounded corners to location and label */}
+.spacer { background-position: -98px -81px; width: 1px; height: 1px; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.error1, .errorx
+{ display: inline-block; background: url('/images/errors.webp') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; border-radius: 8px; /* Add rounded corners to location and label */}
+ 
+.error1 { background-position: -5px -0px; width: 237px; height: 206px; border-radius: 8px; /* Add rounded corners to location and label */}
+.errorx { background-position: -5px -211px; width: 237px; height: 214px; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.centered {display: table; justify-content: center; margin: 0 auto; vertical-align: middle; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table {display: table; width: 100%; align: center; cellspacing: 0; cellpadding: 0; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_row {display: table-row: border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_head {display: table-header-group; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_cell, .news_tableHead {background:url(/images/tsw/pixel.webp) repeat; display: table-cell, padding: 3px 10px; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_cell2 {background:url(/images/tsw/pixel.webp) repeat; width: 100%; display: table-cell, padding: 3px 10px; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_cell3 {background:url(/images/tsw/pixel.webp) repeat; float: left; width: 50%; display: table-cell, padding: 3px 10px; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_cell4 {background:url(/images/tsw/pixel.webp) repeat; float: right; width: 50%; text-align: right; display: table-cell, padding: 3px 10px; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_heading {display: table-header-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_foot {display: table-footer-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.news_table_body {display: table-row-group; background-color: #282828; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.error_page {display: table; justify-content: center; margin: 0 auto; vertical-align: middle; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_image {background: url(/images/404.jpg>) no-repeat; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table {display: table; width: 100%; justify-content: center; border-color:#727272;border-style:solid; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table_row {display: table-row; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table_head {display: table-header-group; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table_cell {float: left; display: table-cell; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table_cell2 {display: table-cell; width: 50%; float: right; text-align: center; justify-content: center; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table_heading {display: table-header-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table_foot {display: table-footer-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.error_table_body {display: table-row-group; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.links_table {display: table; width: 50%; justify-content: center; margin: 0 auto; vertical-align: middle; background-color: grey; border-color:#727272;border-style:solid; border-radius: 8px; /* Add rounded corners to location and label */}
+.links_table_row {display: table-row; border-radius: 8px; /* Add rounded corners to location and label */}
+.links_table_head {display: table-header-group; border-radius: 8px; /* Add rounded corners to location and label */}
+.links_table_cell {justify-content: center; display: table-cell; border-radius: 8px; /* Add rounded corners to location and label */}
+.links_table_cell2 {display: table-cell; width: 100%; float: right; text-align: center; justify-content: center; border-radius: 8px; /* Add rounded corners to location and label */}
+.links_table_heading {display: table-header-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.links_table_foot {display: table-footer-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.links_table_body {display: table-row-group; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.member_table {display: table; width: 100%; justify-content: center; margin: 0 auto; vertical-align: middle; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_row {display: table-row; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_head {display: table-header-group; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_cell {justify-content: center; display: table-cell; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_cell2 {display: table-cell; width: 100%; float: right; text-align: center; justify-content: center; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_heading {display: table-header-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_foot {display: table-footer-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_body {display: table-row-group; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.member_inner_table {display: table; width: 50%; justify-content: center; margin: 0 auto; vertical-align: middle; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table_row {display: table-row; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table_head {display: table-header-group; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table_cell {justify-content: center; display: table-cell; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_table_cell2 {display: table-cell; width: 100%; text-align: center; justify-content: center; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table_heading {display: table-header-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table_foot {display: table-footer-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table_body {display: table-row-group; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.member_inner_table2 {display: table; width: 50%; justify-content: center; margin: 0 auto; vertical-align: middle; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_row {display: table-row; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_head {display: table-header-group; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_cell {display: table-cell; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_cell {justify-content: left; display: table-cell; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_cell2 {display: table-cell; width: 100%; text-align: center; justify-content: center; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_heading {display: table-header-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_foot {display: table-footer-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.member_inner_table2_body {display: table-row-group; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.members_table {display: table; width: 50%; justify-content: center; margin: 0 auto; vertical-align: middle; border-radius: 8px; /* Add rounded corners to location and label */}
+.members_table_row {display: table-row; border-radius: 8px; /* Add rounded corners to location and label */}
+.members_table_head {display: table-header-group; border-radius: 8px; /* Add rounded corners to location and label */}
+.members_table_cell {justify-content: center; display: table-cell; border-radius: 8px; /* Add rounded corners to location and label */}
+.members_table_cell2 {display: table-cell; width: 20%; text-align: center; justify-content: center; border-radius: 8px; /* Add rounded corners to location and label */}
+.members_table_heading {display: table-header-group; font-weight: bold; border-radius: 8px; /* Add rounded corners to location and label */}
+.members_table_foot {display: table-footer-group; font-weight: bold;  border-radius: 8px; /* Add rounded corners to location and label */}
+.members_table_body {display: table-row-group; border-radius: 8px; /* Add rounded corners to location and label */}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	border-radius: 8px; /* Add rounded corners to location and label */
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+	border-radius: 8px; /* Add rounded corners to location and label */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+	border-radius: 8px; /* Add rounded corners to location and label */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius: 8px; /* Add rounded corners to location and label */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	border-radius: 8px; /* Add rounded corners to location and label */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1; border-radius: 8px; /* Add rounded corners to location and label */}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block; border-radius: 8px; /* Add rounded corners to location and label */}
+
+.dropit {
+    list-style: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 8px; /* Add rounded corners to location and label */
+}
+.dropit .dropit-trigger { position: relative; border-radius: 8px; /* Add rounded corners to location and label */}
+.dropit .dropit-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0; /* dropdown left or right */
+    z-index: 1000;
+    display: none;
+    min-width: 150px;
+    list-style: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 8px; /* Add rounded corners to location and label */
+}
+.dropit .dropit-open .dropit-submenu { display: block; border-radius: 8px; /* Add rounded corners to location and label */}
+
+
+@media only screen and (max-width: 768px) {
+    .right-menu {
+        position: relative; /* Or absolute if necessary */
+        float: none;
+        width: 100%; /* Adjust to fit the screen */
+        margin-top: 10px; /* Space it below the center text */
+    }
+
+    .center-text {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+
+    .left-menu {
+        float: none;
+        width: 100%;
+    }
+}
+.sidebar-menu .sidebar-active {
+    background-color: #495057 !important;
+    border-color: #adb5bd !important;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.sidebar-menu .sidebar-active::before {
+    content: "➜ ";
+}

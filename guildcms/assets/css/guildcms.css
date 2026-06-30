@@ -1,0 +1,212 @@
+:root {
+    --guild-bg: #080b12;
+    --guild-surface: #111827;
+    --guild-surface-2: #172033;
+    --guild-border: rgba(255, 255, 255, .12);
+    --guild-text: #f8fafc;
+    --guild-muted: #94a3b8;
+    --guild-accent: #60a5fa;
+    --guild-accent-2: #22c55e;
+}
+
+body {
+    background:
+        radial-gradient(circle at 15% 15%, rgba(96, 165, 250, .16), transparent 32rem),
+        radial-gradient(circle at 85% 10%, rgba(34, 197, 94, .10), transparent 28rem),
+        var(--guild-bg);
+    color: var(--guild-text);
+    min-height: 100vh;
+}
+
+.guild-nav {
+    background: rgba(8, 11, 18, .88);
+    border-bottom: 1px solid var(--guild-border);
+    backdrop-filter: blur(12px);
+}
+
+.brand-mark {
+    color: var(--guild-accent);
+}
+
+.guild-hero {
+    padding: 6rem 0 4rem;
+}
+
+.guild-card {
+    background: linear-gradient(180deg, rgba(17, 24, 39, .96), rgba(15, 23, 42, .96));
+    border: 1px solid var(--guild-border);
+    border-radius: 1rem;
+    color: var(--guild-text);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .25);
+}
+
+.guild-card-soft {
+    background: rgba(17, 24, 39, .78);
+    border: 1px solid var(--guild-border);
+    border-radius: 1rem;
+}
+
+.guild-muted {
+    color: var(--guild-muted);
+}
+
+.guild-gradient-text {
+    background: linear-gradient(90deg, #bfdbfe, #86efac);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.guild-progress {
+    height: 1.1rem;
+    background-color: rgba(148, 163, 184, .25);
+}
+
+.guild-progress .progress-bar {
+    background: linear-gradient(90deg, var(--guild-accent), var(--guild-accent-2));
+}
+
+.phase-line {
+    border-left: 3px solid var(--guild-accent);
+    padding-left: 1rem;
+}
+
+.phase-line.complete {
+    border-left-color: var(--guild-accent-2);
+}
+
+.phase-line.planned {
+    border-left-color: #64748b;
+}
+
+.timeline-item {
+    border-left: 3px solid rgba(96, 165, 250, .65);
+    padding-left: 1rem;
+    margin-left: .4rem;
+}
+
+.timeline-dot {
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background: var(--guild-accent);
+    margin-left: -1.45rem;
+    margin-bottom: -.7rem;
+}
+
+.guild-footer {
+    background: rgba(8, 11, 18, .92);
+    border-top: 1px solid var(--guild-border);
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--guild-text);
+    --bs-table-border-color: var(--guild-border);
+}
+
+
+.guild-alert-soft {
+    background: rgba(96, 165, 250, .14);
+    border-color: rgba(96, 165, 250, .35);
+    color: var(--guild-text);
+}
+
+.guild-mini-check {
+    background: rgba(15, 23, 42, .78);
+    border: 1px solid var(--guild-border);
+    border-radius: .75rem;
+    padding: .85rem 1rem;
+    min-height: 100%;
+}
+
+.guild-mini-check::before {
+    content: "✓";
+    color: var(--guild-accent-2);
+    font-weight: 700;
+    margin-right: .5rem;
+}
+
+.guild-footer-links li + li {
+    margin-top: .35rem;
+}
+
+.engineering-hero {
+    padding-top: 5rem;
+}
+
+.engineering-kicker {
+    color: var(--guild-accent);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.engineering-publication-card {
+    transition: transform .18s ease, border-color .18s ease;
+}
+
+.engineering-publication-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(96, 165, 250, .45);
+}
+
+.engineering-sidebar {
+    top: 5.5rem;
+}
+
+.engineering-nav-list li + li {
+    margin-top: .35rem;
+}
+
+.engineering-nav-list a {
+    color: var(--guild-muted);
+    display: block;
+    padding: .45rem .55rem;
+    border-radius: .55rem;
+    text-decoration: none;
+}
+
+.engineering-nav-list a:hover,
+.engineering-nav-list a.active {
+    background: rgba(96, 165, 250, .14);
+    color: var(--guild-text);
+}
+
+.engineering-nav-list a span {
+    display: block;
+    font-size: .72rem;
+    color: var(--guild-muted);
+}
+
+.engineering-meta {
+    display: grid;
+    gap: .75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.engineering-meta div {
+    border-bottom: 1px solid var(--guild-border);
+    padding-bottom: .55rem;
+}
+
+.engineering-meta strong,
+.engineering-meta span {
+    display: block;
+}
+
+.engineering-meta strong {
+    font-size: .78rem;
+    color: var(--guild-muted);
+    text-transform: uppercase;
+}
+
+.guild-breadcrumb .breadcrumb-item.active {
+    color: var(--guild-muted);
+}
+
+@media (max-width: 767.98px) {
+    .engineering-meta {
+        grid-template-columns: 1fr;
+    }
+}
