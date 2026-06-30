@@ -12,6 +12,7 @@ $previousKey = $installer->previousStepKey($currentKey);
 $nextKey = $installer->nextStepKey($currentKey);
 $percent = $installer->progressPercent($currentKey);
 $savedAt = $installer->state()->savedAt();
+$canContinue = !method_exists($step, 'canContinue') || $step->canContinue();
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -59,7 +60,12 @@ $savedAt = $installer->state()->savedAt();
                     <a class="button button-secondary" href="?step=<?= InstallerView::escape($currentKey) ?>&amp;action=save">Save</a>
                     <a class="button button-secondary" href="?step=welcome&amp;action=cancel">Cancel</a>
                     <?php if ($nextKey !== null): ?>
-                        <a class="button" href="?step=<?= InstallerView::escape($nextKey) ?>">Continue</a>
+                        <?php if ($canContinue): ?>
+                            <a class="button" href="?step=<?= InstallerView::escape($nextKey) ?>">Continue</a>
+                        <?php else: ?>
+                            <a class="button button-disabled" aria-disabled="true" href="?step=<?= InstallerView::escape($currentKey) ?>">Continue</a>
+                            <a class="button" href="?step=<?= InstallerView::escape($currentKey) ?>">Recheck</a>
+                        <?php endif; ?>
                     <?php else: ?>
                         <a class="button" href="../">Visit site</a>
                     <?php endif; ?>
