@@ -171,6 +171,7 @@ $guildcmsEngineeringPublications = [
     ['id' => 'GCMS-ENG-010', 'publication' => 'Publication 10', 'volume' => 'Volume X', 'title' => 'Engineering Roadmap & Publication Framework', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.3.0-11', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'future.php'],
     ['id' => 'GCMS-ENG-011', 'publication' => 'Publication 11', 'volume' => 'Volume XI', 'title' => 'User Experience & Educational Design Principles', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.4.0-3', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'user-experience.php'],
     ['id' => 'GCMS-ENG-012', 'publication' => 'Publication 12', 'volume' => 'Volume XII', 'title' => 'Installer Testing & Certification Framework', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.4.0-6', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'installer-testing-certification.php'],
+    ['id' => 'GCMS-ENG-013', 'publication' => 'Publication 13', 'volume' => 'Volume XIII', 'title' => 'Development & Release Standard', 'status' => 'Published', 'version' => '1.0', 'phase' => '4.4.0-7', 'url' => $guildcmsEngineeringPublicationsBaseUrl . 'development-release-standard.php'],
 ];
 
 function guildcms_count_backlog_items(array $backlog): int

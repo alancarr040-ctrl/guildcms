@@ -199,6 +199,22 @@ function guildcms_engineering_publications(): array
             'summary' => 'Defines installer testing, runtime support policy, certification environments, base and perfect expectations, failure recovery tests, UX validation, security checks, and release certification standards.',
             'topics' => ['Installer testing', 'Certification environments', 'Runtime support', 'Failure recovery', 'Accessibility checks', 'Release certification'],
         ],
+        [
+            'id' => 'GCMS-ENG-013',
+            'publication' => 'Publication 13',
+            'volume' => 'Volume XIII',
+            'title' => 'Guild CMS Development & Release Standard',
+            'slug' => 'development-release-standard.php',
+            'status' => 'Published',
+            'version' => '1.0',
+            'phase' => '4.4.0-7',
+            'updated' => 'June 2026',
+            'applies_to' => 'All Guild CMS packages beginning with Phase 4.4',
+            'category' => 'Release Engineering',
+            'summary' => 'Defines the official Guild CMS package workflow, repository layout, release documentation, SQL migration rules, roadmap semantics, validation requirements, packaging format, Git baseline policy, and release quality gates.',
+            'topics' => ['Package workflow', 'Repository layout', 'SQL migration standards', 'Release documentation', 'Roadmap governance', 'Validation gates', 'Package manifests'],
+        ],
+
     ];
 }
 
