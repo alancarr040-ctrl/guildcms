@@ -19,7 +19,7 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-7">
                 <div class="guild-card p-4 h-100">
                     <h2 class="h4">Installer framework purpose</h2>
-                    <p class="guild-muted">Package 4.4.0-8 adds platform intelligence to the installer. Guild CMS now detects the operating system, web server, PHP runtime, database drivers, filesystem permissions, HTTPS status, and Linux security controls before later steps ask for configuration details.</p>
+                    <p class="guild-muted">Package 4.4.0-8 adds platform intelligence to the installer. Package 4.4.0-8a refines that intelligence into educational guidance by explaining the includes directory, PHP execution user, filesystem ownership, permissions, and technical details through progressive disclosure.</p>
                     <p class="guild-muted mb-0">Future Phase 4.4 packages will use this detected environment to provide better guidance for requirements, database setup, configuration generation, administrator creation, installer locking, and final health verification.</p>
                 </div>
             </div>
@@ -72,5 +72,11 @@ require __DIR__ . '/includes/header.php';
             <p class="guild-muted mb-0"><strong>Development Center</strong> tracks engineering progress, <strong>guildcms</strong> documents the public project, and <strong>devsite</strong> is the installable Guild CMS product tree used to validate the installer and future reference installations.</p>
         </div>
     </div>
+
+        <div class="guild-card p-4 mt-4">
+            <h2 class="h4">Educational environment details</h2>
+            <p class="guild-muted mb-0">Environment Detection now explains filesystem results before showing raw paths. The installer reports the effective PHP user and group, the owner and permissions of the includes directory, and why those details matter when Guild CMS later creates <code>includes/config.inc.php</code>.</p>
+        </div>
+
 </section>
 <?php require __DIR__ . '/includes/footer.php'; ?>

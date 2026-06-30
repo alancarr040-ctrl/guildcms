@@ -101,3 +101,15 @@ Every package must include a manifest listing package number, deliverable, chang
 ## Package 4.4.0-8 Addendum: Environment-Aware Installer Packages
 
 Installer implementation packages that add platform behavior must update the installer testing references and include validation notes for clean operating system environments. Packages should avoid assuming a hosting control panel. When platform-specific guidance is needed, it should be derived from detected operating system and package manager data.
+
+## Installer Usability Hotfix Standard
+
+Installer hotfix packages may refine the user experience of an existing installer step without creating a new roadmap deliverable.
+
+When a hotfix improves installer clarity, it should:
+
+- Preserve the existing installer flow.
+- Keep the change focused and testable.
+- Update the relevant Engineering Library guidance when a new principle is discovered.
+- Include release documentation and a package manifest.
+- Avoid SQL unless roadmap or Development Center records must change.

@@ -119,3 +119,17 @@ The Development Center should record installer certification results by package,
 Installer certification now includes environment detection validation. The installer records operating system, package manager family, web server reporting, PHP runtime details, database drivers, filesystem readiness, HTTPS status, and Linux security controls before later steps rely on that information.
 
 Guild CMS certifies operating system environments rather than paid control panels. Control panels may remain compatible when they provision supported runtimes, but the certification target is the environment created by the operating system and package manager.
+
+## Environment Detection Usability Checks
+
+Installer certification should verify that environment detection is both technically accurate and educational.
+
+Certification checks should confirm that:
+
+- The operating system and package manager are detected.
+- The effective PHP user and group are shown.
+- The document root and includes directory path are available.
+- Includes directory owner, group, and permissions are shown in technical details.
+- Permission problems explain which account likely needs write access.
+- Loaded PHP extensions are readable and not displayed as a single long line.
+- Technical values are available without overwhelming the default page.

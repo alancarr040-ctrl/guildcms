@@ -41,7 +41,7 @@ $installerSteps = [
         <div class="card-body">
             <div class="small text-info text-uppercase fw-semibold mb-2">Phase 4.4 - Installation &amp; Bootstrap System</div>
             <h2 class="h4">Installer Environment Detection</h2>
-            <p class="mb-0">Package 4.4.0-8 adds operating system, web server, PHP, database driver, filesystem, HTTPS, SELinux, and AppArmor detection so later installer steps can give accurate platform-specific guidance.</p>
+            <p class="mb-0">Package 4.4.0-8 adds operating system, web server, PHP, database driver, filesystem, HTTPS, SELinux, and AppArmor detection so later installer steps can give accurate platform-specific guidance. Package 4.4.0-8a refines that detection into an educational report with PHP user, group, ownership, permissions, and progressive technical details.</p>
         </div>
     </div>
 
@@ -58,6 +58,8 @@ $installerSteps = [
                         <li>Allow back, save, cancel, refresh, and resume.</li>
                         <li>Do not write permanent changes until the Install step.</li>
                         <li>Errors should teach, reassure, and explain recovery.</li>
+                        <li>Filesystem and permission details should explain who PHP is running as and where files live.</li>
+                        <li>Technical information should remain available through progressive disclosure.</li>
                     </ul>
                 </div>
             </div>

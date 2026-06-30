@@ -14,14 +14,17 @@ final class InstallerPlatform
         $security = self::detectSecurityControls();
         $paths = self::detectPaths();
 
+        $packageManager = self::detectPackageManager($os);
+
         return [
             'detected_at' => gmdate('c'),
             'os' => $os,
-            'package_manager' => self::detectPackageManager($os),
+            'package_manager' => $packageManager,
             'web_server' => $server,
             'php' => $php,
             'database_drivers' => self::detectDatabaseDrivers(),
             'filesystem' => $paths,
+            'process' => self::detectProcessIdentity(),
             'https' => self::detectHttps(),
             'security_controls' => $security,
         ];
@@ -129,6 +132,8 @@ final class InstallerPlatform
             'upload_max_filesize' => ini_get('upload_max_filesize') ?: 'unknown',
             'post_max_size' => ini_get('post_max_size') ?: 'unknown',
             'timezone' => date_default_timezone_get(),
+            'ini_file' => php_ini_loaded_file() ?: 'not reported',
+            'additional_ini_files' => php_ini_scanned_files() ?: 'not reported',
             'extensions' => $extensions,
         ];
     }
@@ -148,18 +153,96 @@ final class InstallerPlatform
         $includes = GUILDCMS_ROOT . '/includes';
         $config = $includes . '/config.inc.php';
         $sample = $includes . '/config.sample.inc.php';
+        $includesExists = is_dir($includes);
 
         return [
             'root' => GUILDCMS_ROOT,
+            'document_root' => (string) ($_SERVER['DOCUMENT_ROOT'] ?? GUILDCMS_ROOT),
             'installer_root' => GUILDCMS_INSTALLER_ROOT,
             'includes_path' => $includes,
             'config_target' => $config,
             'config_sample' => $sample,
-            'includes_exists' => is_dir($includes),
-            'includes_writable' => is_dir($includes) && is_writable($includes),
+            'includes_exists' => $includesExists,
+            'includes_writable' => $includesExists && is_writable($includes),
+            'includes_owner_uid' => $includesExists ? (string) @fileowner($includes) : 'unknown',
+            'includes_owner' => $includesExists ? self::ownerName($includes) : 'unknown',
+            'includes_group_gid' => $includesExists ? (string) @filegroup($includes) : 'unknown',
+            'includes_group' => $includesExists ? self::groupName($includes) : 'unknown',
+            'includes_permissions' => $includesExists ? self::permissionsString($includes) : 'unknown',
             'config_exists' => is_file($config),
             'sample_exists' => is_file($sample),
         ];
+    }
+
+    /** @return array<string,string> */
+    private static function detectProcessIdentity(): array
+    {
+        $uid = function_exists('posix_geteuid') ? (int) posix_geteuid() : null;
+        $gid = function_exists('posix_getegid') ? (int) posix_getegid() : null;
+
+        $user = 'unknown';
+        if ($uid !== null && function_exists('posix_getpwuid')) {
+            $row = @posix_getpwuid($uid);
+            if (is_array($row) && isset($row['name'])) {
+                $user = (string) $row['name'];
+            }
+        }
+
+        $group = 'unknown';
+        if ($gid !== null && function_exists('posix_getgrgid')) {
+            $row = @posix_getgrgid($gid);
+            if (is_array($row) && isset($row['name'])) {
+                $group = (string) $row['name'];
+            }
+        }
+
+        return [
+            'uid' => $uid !== null ? (string) $uid : 'unknown',
+            'user' => $user,
+            'gid' => $gid !== null ? (string) $gid : 'unknown',
+            'group' => $group,
+            'script_owner' => get_current_user(),
+        ];
+    }
+
+    private static function ownerName(string $path): string
+    {
+        $uid = @fileowner($path);
+        if ($uid === false) {
+            return 'unknown';
+        }
+        if (function_exists('posix_getpwuid')) {
+            $row = @posix_getpwuid((int) $uid);
+            if (is_array($row) && isset($row['name'])) {
+                return (string) $row['name'];
+            }
+        }
+        return (string) $uid;
+    }
+
+    private static function groupName(string $path): string
+    {
+        $gid = @filegroup($path);
+        if ($gid === false) {
+            return 'unknown';
+        }
+        if (function_exists('posix_getgrgid')) {
+            $row = @posix_getgrgid((int) $gid);
+            if (is_array($row) && isset($row['name'])) {
+                return (string) $row['name'];
+            }
+        }
+        return (string) $gid;
+    }
+
+    private static function permissionsString(string $path): string
+    {
+        $perms = @fileperms($path);
+        if ($perms === false) {
+            return 'unknown';
+        }
+
+        return substr(sprintf('%o', $perms), -4);
     }
 
     /** @return array<string,mixed> */

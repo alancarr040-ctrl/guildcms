@@ -55,3 +55,18 @@ The installer should generate `includes/config.inc.php`. A fresh installable pac
 ## Product Identity
 
 Guild CMS exists to help people succeed, not merely to complete tasks. The installer, Administration Center, documentation, public site, and Development Center should all reflect the same values: clarity, respect, education, confidence, and accessibility.
+
+## Progressive Disclosure and Server Knowledge
+
+Guild CMS must never assume prior Linux, hosting, or server administration knowledge.
+
+When the installer introduces technical concepts such as filesystem paths, PHP users, directory ownership, or permissions, it must explain:
+
+1. What the item is.
+2. Why Guild CMS needs it.
+3. Where it is located, when applicable.
+4. How to correct it if something needs attention.
+
+Technical details should not be removed. They should be presented through progressive disclosure: a clear explanation first, followed by expandable implementation details for administrators who need or want them.
+
+This principle exists because many administrators encounter instructions such as "edit this file" or "change ownership" without being told where the file lives, who PHP is running as, or which account needs permission. Guild CMS should avoid that failure mode by teaching the context directly inside the installer.
