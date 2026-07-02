@@ -9,6 +9,18 @@
     <h1>Development Journal</h1>
 
 
+    <article class="card bg-dark text-light border-info mb-4">
+        <div class="card-header">July 2026 &mdash; Phase 4.4 Roadmap Realigned</div>
+        <div class="card-body">
+            <p>Package 4.4.0-10 corrects the phase boundary discovered after Installer Certification Milestone 1.</p>
+            <p>Configuration generation, requirements validation, database bootstrap, database initialization, administrator account creation, first-run site configuration, plugin manifest format, plugin discovery, hook/event system, and site bootstrap are installer responsibilities and now belong to Phase 4.4.</p>
+            <p class="mb-0">Phase 4.5 is restored as Data Normalization &amp; Governance. This package changes roadmap structure only; no new installer runtime functionality is introduced.</p>
+        </div>
+    </article>
+
+
+
+
     <article class="card bg-dark text-light border-success mb-4">
         <div class="card-header">June 2026 &mdash; Engineering Library Volume I Completed</div>
         <div class="card-body">

@@ -1,20 +1,20 @@
 <?php
 /**
  * Guild CMS Development Roadmap
- * Updated for Package 4.4.0-1 Installation Architecture
+ * Updated for Package 4.4.0-10 Phase Roadmap Realignment
  */
 require_once __DIR__ . '/../includes/phase_status.inc.php';
 ?>
 
 <section class="dev-center-section">
     <h1>Guild CMS Roadmap</h1>
-    <p class="lead">Phase 4.4 is now active and establishes the installation architecture and bootstrap framework for the Guild CMS product.</p>
+    <p class="lead">Phase 4.4 is active as the complete Installation & Bootstrap System lifecycle for Guild CMS.</p>
 
     <div class="card bg-dark text-light border-secondary mb-4">
         <div class="card-header">Current Focus</div>
         <div class="card-body">
             <h2 class="h5">Phase 4.4 - Installation &amp; Bootstrap System</h2>
-            <p class="mb-0">Package 4.4.0-1 defines the installer boundary, bootstrap stages, security rules, and package sequence before executable installer screens and database bootstrap actions are introduced.</p>
+            <p class="mb-0">Package 4.4.0-10 realigns the roadmap so configuration generation, requirements validation, database bootstrap, database initialization, administrator creation, first-run site configuration, plugin bootstrap responsibilities, hook/event bootstrap, and site bootstrap remain in Phase 4.4 before Phase 4.5 begins.</p>
         </div>
     </div>
 

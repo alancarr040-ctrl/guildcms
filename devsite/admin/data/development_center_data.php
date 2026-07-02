@@ -11,10 +11,10 @@ if (!defined('IN_PHPBB')) {
 }
 
 $guildcmsDevCenter = [
-    'version' => 'v0.4.3 Phase 4.3',
-    'current_phase' => 'Phase 4.3 - Engineering Foundation & Governance',
-    'next_phase' => 'Phase 4.4 - Installation & Bootstrap System',
-    'platform_direction' => 'Engineering Foundation',
+    'version' => 'v0.4.4 Phase 4.4 Roadmap Realignment',
+    'current_phase' => 'Phase 4.4 - Installation & Bootstrap System',
+    'next_phase' => 'Phase 4.5 - Data Normalization & Governance',
+    'platform_direction' => 'Complete Installer Lifecycle Roadmap',
 ];
 
 $guildcmsRoadmap = [
@@ -25,9 +25,10 @@ $guildcmsRoadmap = [
     ['title' => 'Phase 3C - Content Rendering Engine', 'status' => 'Complete', 'progress' => 100],
     ['title' => 'Phase 4.1 - Security Foundation', 'status' => 'Complete', 'progress' => 100],
     ['title' => 'Phase 4.2 - Security Hardening', 'status' => 'Complete', 'progress' => 100],
-    ['title' => 'Phase 4.3 - Engineering Foundation & Governance', 'status' => 'In Progress', 'progress' => 60],
-    ['title' => 'Phase 4.4 - Installation & Bootstrap System', 'status' => 'Planned', 'progress' => 0],
-    ['title' => 'Phase 4.5 - Upgrade & Migration Framework', 'status' => 'Planned', 'progress' => 0],
+    ['title' => 'Phase 4.3 - Engineering Foundation & Governance', 'status' => 'Complete', 'progress' => 100],
+    ['title' => 'Phase 4.4 - Installation & Bootstrap System', 'status' => 'In Progress', 'progress' => 75],
+    ['title' => 'Phase 4.5 - Data Normalization & Governance', 'status' => 'Planned', 'progress' => 0],
+    ['title' => 'Phase 4.6 - Upgrade & Migration Framework', 'status' => 'Planned', 'progress' => 0],
     ['title' => 'Phase 5.0 - Plugin SDK & Extension Framework', 'status' => 'Planned', 'progress' => 0],
     ['title' => 'Phase 5.1 - Theme Engine & Template System', 'status' => 'Planned', 'progress' => 0],
     ['title' => 'Phase 5.2 - CLI & Developer Tools', 'status' => 'Planned', 'progress' => 0],

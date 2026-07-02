@@ -109,15 +109,16 @@ $timeline = [
     ],
     [
         'label' => 'Phase 4.4',
-        'status' => 'complete',
+        'status' => 'current',
         'title' => 'Installation & Bootstrap System',
-        'body' => 'Phase 4.4 established the Guild CMS installer framework, readiness checks, environment detection, platform intelligence, educational installer guidance, testing standards, release standards, and the first cross-platform installer certification milestone.',
+        'body' => 'Phase 4.4 now represents the complete Guild CMS installer lifecycle, including certification foundation work plus the remaining bootstrap responsibilities that were incorrectly assigned to Phase 4.5.',
         'points' => [
             'Confirmed devsite as the installable Guild CMS product tree.',
             'Published GCMS-ENG-011, GCMS-ENG-012, and GCMS-ENG-013 to formalize installer experience, testing, certification, development, and release standards.',
             'Implemented environment detection and platform intelligence for operating system, package manager, PHP runtime, database support, document root, HTTPS, SELinux, and AppArmor visibility.',
             'Completed Installer Certification Milestone 1 for Rocky Linux 9.8 + Virtualmin, Rocky Linux 9.8 Minimal, AlmaLinux 9.8 Minimal, Ubuntu 24 Minimal, and Debian 12 Minimal.',
-            'Prepared the project to begin Phase 4.5 Core Installation Experience.',
+            'Realigned configuration generation, requirements validation, database bootstrap, database initialization, administrator account creation, first-run site configuration, plugin manifest format, plugin discovery, hook/event system, and site bootstrap into Phase 4.4.',
+            'Restored Phase 4.5 as Data Normalization & Governance before Phase 4.6 Upgrade & Migration Framework.',
         ],
     ],
 ];

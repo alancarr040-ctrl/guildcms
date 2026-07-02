@@ -47,12 +47,12 @@ require __DIR__ . '/includes/header.php';
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
                 <div>
                     <div class="guild-muted small">Current Roadmap Status</div>
-                    <h2 class="h4 mb-1">Phase 4.4 — Installation & Bootstrap System Complete</h2>
-                    <p class="guild-muted mb-0">Installer Certification Milestone 1 is complete. Guild CMS Installer 4.4.0-8a is certified across five foundation platform scenarios and the project is ready to move toward Phase 4.5 Core Installation Experience.</p>
+                    <h2 class="h4 mb-1">Phase 4.4 — Installation & Bootstrap System Realigned</h2>
+                    <p class="guild-muted mb-0">Installer Certification Milestone 1 is complete, but Phase 4.4 now remains active as the complete installer lifecycle. Configuration generation, requirements validation, database bootstrap, administrator creation, first-run site configuration, plugin bootstrap responsibilities, and site bootstrap are installer work before Phase 4.5 begins.</p>
                 </div>
                 <div style="min-width: 240px;">
                     <div class="small guild-muted mb-1">Phase 4.4 Progress</div>
-                    <?= guildcms_progress(100) ?>
+                    <?= guildcms_progress(75) ?>
                 </div>
             </div>
         </div>

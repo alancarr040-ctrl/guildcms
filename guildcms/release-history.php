@@ -19,6 +19,7 @@ $releases = [
     ['v0.9', 'Security Hardening Complete', 'Phase 4.2 completed, security posture documented, and Phase 4.3 activated for engineering foundation work.'],
     ['v0.10', 'Engineering Library Foundation', 'Public Engineering Library publication framework, Founder\'s Note, and reserved engineering volumes introduced.'],
     ['v0.11', 'Engineering Foundation Complete', 'Engineering Library Volume I completed and Phase 4.3 roadmap realigned so installation and bootstrap work begins cleanly in Phase 4.4.'],
+    ['v0.14', 'Phase Roadmap Realignment', 'Phase 4.4 was realigned as the complete installer lifecycle and Phase 4.5 was restored as Data Normalization & Governance.'],
     ['v0.13', 'Development & Release Standard', 'GCMS-ENG-013 established the official package workflow, SQL migration standard, release documentation requirements, validation gates, and Git baseline policy for Guild CMS development.'],
     ['v0.12', 'Installer Experience Foundation', 'GCMS-ENG-011 established user experience and educational design principles for the installer, Administration Center, errors, documentation, and future user-facing workflows.'],
     ['v1.0', 'Planned First Release', 'Target release line for installer-supported deployment, bootstrap setup, and release-ready documentation.'],

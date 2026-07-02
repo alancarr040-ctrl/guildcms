@@ -9,6 +9,21 @@
     <h1>Changelog</h1>
 
 
+    <div class="card bg-dark text-light border-info mb-3">
+        <div class="card-header">Package 4.4.0-10 &mdash; Phase Roadmap Realignment</div>
+        <div class="card-body">
+            <ul class="mb-0">
+                <li>Reopened Phase 4.4 as the complete installer lifecycle instead of ending it at Installer Certification Milestone 1.</li>
+                <li>Moved configuration generation, requirements validation, database bootstrap, database initialization, administrator account creation, first-run site configuration, plugin manifest format, plugin discovery, hook/event system, and site bootstrap into Phase 4.4.</li>
+                <li>Restored Phase 4.5 as Data Normalization &amp; Governance and preserved Phase 4.6 as Upgrade &amp; Migration Framework.</li>
+                <li>No new installer runtime functionality was introduced in this package.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
     <article class="card bg-dark text-light border-success mb-4">
         <div class="card-header">Version 4.3.0-12 &mdash; Engineering Library Volume I Completion</div>
         <div class="card-body">

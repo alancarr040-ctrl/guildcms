@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.4.0-10 - Phase Roadmap Realignment
+
+- Reopened Phase 4.4 as the complete Installation & Bootstrap System lifecycle.
+- Moved configuration generation, requirements validation, database bootstrap, database initialization, administrator account creation, first-run site configuration, plugin manifest format, plugin discovery, hook/event system, and site bootstrap into Phase 4.4.
+- Restored Phase 4.5 as Data Normalization & Governance and preserved Phase 4.6 as Upgrade & Migration Framework.
+- Added SQL migration for roadmap phase and item realignment only; no new installer runtime functionality was introduced.
+
 ## 4.4.0-9 - Installer Certification Milestone 1 Publication
 
 - Published Installer Certification Milestone 1 for Guild CMS Installer 4.4.0-8a.

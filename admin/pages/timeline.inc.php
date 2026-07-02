@@ -11,6 +11,20 @@
 
     <div class="card bg-dark text-light border-info mb-3">
         <div class="card-body">
+            <h2 class="h5">Phase 4.4 Roadmap Realigned</h2>
+            <ul class="mb-0">
+                <li>Expanded Phase 4.4 so it represents the complete installer lifecycle.</li>
+                <li>Moved the remaining installer responsibilities out of Phase 4.5 and back into Phase 4.4.</li>
+                <li>Restored Phase 4.5 as Data Normalization &amp; Governance before Phase 4.6 Upgrade &amp; Migration Framework.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="card bg-dark text-light border-info mb-3">
+        <div class="card-body">
             <h2 class="h5">Phase 4.4 Roadmap Refined</h2>
             <ul class="mb-0">
                 <li>Updated Phase 4.4 to reflect the current installer-building sequence against the devsite installable product tree.</li>
