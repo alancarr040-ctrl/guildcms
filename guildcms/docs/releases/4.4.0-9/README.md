@@ -22,4 +22,4 @@ This package publishes Installer Certification Milestone 1 for Guild CMS Install
 
 ## SQL
 
-No database schema changes are required for this package.
+No database schema changes are required, but this package includes a data migration: `sql/guildcms_4_4_0_9_installer_certification_publication.sql`. Apply it to record Installer Certification Milestone 1, close Phase 4.4, prepare Phase 4.5, and synchronize database-backed roadmap/journal/changelog tracking.

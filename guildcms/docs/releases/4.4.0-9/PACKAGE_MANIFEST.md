@@ -21,10 +21,11 @@ Installer Certification Milestone 1 Publication
 - guildcms/timeline.php
 - devsite/docs/INSTALLER_TESTING_CERTIFICATION.md
 - devsite/docs/certifications/*
+- sql/guildcms_4_4_0_9_installer_certification_publication.sql
 
 ## SQL
 
-No SQL changes.
+Added SQL migration `sql/guildcms_4_4_0_9_installer_certification_publication.sql` to record Installer Certification Milestone 1, close Phase 4.4, prepare Phase 4.5, and synchronize database-backed roadmap, journal, and changelog tracking.
 
 ## Validation
 

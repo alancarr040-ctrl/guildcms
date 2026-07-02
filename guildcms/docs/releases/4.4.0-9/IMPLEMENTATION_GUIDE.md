@@ -8,9 +8,10 @@ Expected roots:
 admin/
 guildcms/
 devsite/
+sql/
 ```
 
-No SQL migration is required.
+Apply `sql/guildcms_4_4_0_9_installer_certification_publication.sql` after uploading the files to synchronize database-backed roadmap, journal, changelog, and phase status records.
 
 After upload, verify:
 
