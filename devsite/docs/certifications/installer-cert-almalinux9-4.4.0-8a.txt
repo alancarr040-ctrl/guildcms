@@ -1,0 +1,150 @@
+Installer Certification Report
+Platform: AlmaLinux 9.8 Minimal
+Revision: 1
+
+Certification Date: 2026-07-01
+Tester: Alan Carr
+
+Test Environment
+  Virtual Machine: Yes
+  Clean Installation: Yes
+  Existing Production Server: No
+  Previous Guild CMS Installation: No
+
+Guild CMS Phase: 4.4 - Installation & Bootstrap System 
+
+Platform Preparation
+--------------------
+Run the following commands:
+  sudo dnf update -y
+  sudo dnf install httpd mariadb-server php php-cli php-fpm php-mysqlnd php-gd php-mbstring php-xml php-opcache php-curl php-zip php-intl unzip git -y
+
+Installation/Test Notes:
+First and foremost installing this way does not include mod_ssl for apache that will need to be added:
+  sudo dnf install mod_ssl -y
+
+You will be missing wget, tar and nano
+  sudo dnf install wget tar nano -y
+
+These utilities are not required by GuildCMS itself.  They are recommended for server administration and installation convenience.
+
+Alma Linux installs PHP 8.0.30 by default.  GuildCMS recommends PHP 8.3
+Upgrading via DNF modules
+  sudo dnf module list php
+  sudo dnf module enable php:8.3 (might as well jump to the highest offered)
+  sudo dnf install php-cli php-fpm
+  sudo php -v
+  sudo php-fpm -v
+Upgrade was successful
+
+Enable and start Apache, PHP-FPM and MariaDB
+  sudo systemctl enable httpd php-fpm mariadb
+  sudo systemctl start httpd php-fpm mariadb
+
+Now you might have an issue with your ssl cert as its self signed
+  https://yoursite/
+
+Get the files
+go into your domain folder (for a new server its /var/www/html/)
+  cd /var/www/html
+  sudo wget https://guildcms.theregs.org/downloads/guildcms.tar.gz
+(for purposes of the test its https://www.theregs.org/down/devsite.tgz)
+
+Distribution ID: almalinux Version: 9.8
+  Package Manager: dnf
+  Kernel: 5.14.0-687.5.3.el9_8.x86_64
+  Detection Source: /etc/os-release
+
+Web Server: 
+  Reported Software: Apache/2.4.62 (AlmaLinux) OpenSSL/3.5.5
+  PHP SAPI: fpm-fcgi
+  Document Root: /var/www/html
+
+PHP Runtime: 8.3.31
+  PHP SAPI: fpm-fcgi
+  Effective PHP User: unknown
+  Effective PHP Group: unknown
+  Memory Limit: 128M
+  Upload Limit: 2M
+  Post Limit: 8M
+  Timezone: UTC
+  Loaded php.ini: /etc/php.ini
+  Additional INI Files
+    /etc/php.d/10-opcache.ini, /etc/php.d/20-bz2.ini, /etc/php.d/20-calendar.ini, /etc/php.d/20-ctype.ini, /etc/php.d/20-curl.ini, /etc/php.d/20-dom.ini, /etc/php.d/20-exif.ini, /etc/php.d/20-fileinfo.ini, /etc/php.d/20-ftp.ini,
+   /etc/php.d/20-gd.ini, /etc/php.d/20-gettext.ini, /etc/php.d/20-iconv.ini, /etc/php.d/20-intl.ini, /etc/php.d/20-mbstring.ini, /etc/php.d/20-mysqlnd.ini, /etc/php.d/20-pdo.ini, /etc/php.d/20-phar.ini, /etc/php.d/20-simplexml.ini, 
+   /etc/php.d/20-sqlite3.ini, /etc/php.d/20-tokenizer.ini, /etc/php.d/20-xml.ini, /etc/php.d/20-xmlwriter.ini, /etc/php.d/20-xsl.ini, /etc/php.d/30-mysqli.ini, /etc/php.d/30-pdo_mysql.ini, /etc/php.d/30-pdo_sqlite.ini, 
+   /etc/php.d/30-xmlreader.ini, /etc/php.d/40-zip.ini 
+
+Database:
+  MySQLi: Available
+  PDO MySQL: Available
+
+Includes:
+  Includes Path: /var/www/html/includes
+  Config Target: /var/www/html/includes/config.inc.php
+  Sample Config: /var/www/html/includes/config.sample.inc.php
+  Directory Owner: 48
+  Directory Group: 48
+  Permissions: 0755
+  Effective PHP User: unknown
+  Effective PHP Group: unknown
+  Configuration Exists: Yes
+  Sample Configuration Exists: Yes
+
+Security: HTTPS: Detected
+  Server Port: 443
+  Forwarded Protocol: not provided
+  SELinux: Present, status unavailable to PHP
+  AppArmor: Not detected
+
+Installer Accuracy
+  ✓ Distribution detected correctly
+  ✓ Package manager detected correctly
+  ✓ Document root detected correctly
+  ✓ PHP configuration detected correctly
+  ✓ Database extensions detected correctly
+  ✓ SELinux detected
+  ✓ HTTPS detected
+  ✓ Installer identified write permission issue correctly
+
+  No source compilation required.
+  No manual PHP compilation required.
+  No Guild CMS code modifications required.
+
+SELinux Configuration:
+  Because SELinux is enforcing access controls, Guild CMS cannot write includes/config.inc.php until SELinux permissions are updated or SELinux is disabled. This is expected behavior on SELinux-enabled systems.
+     Disable it (not recommended)
+     Run the following: sudo semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html/includes(/.*)?"
+                        restorecon -R -v /var/www/html/includes
+
+  Once these commands are run Requirements passed and since we ran the php installer at the beginning all recommended are installed
+
+Certification Results:
+  Platform: AlmaLinux 9.8 Minimal
+  Installer Version: 4.4.0-8a
+  Status: Certified
+  Summary: Guild CMS installs successfully on AlmaLinux 9.8 Minimal after upgrading PHP, installing mod_ssl, and applying the required SELinux policy adjustments.
+
+Notes:
+  Requires PHP module upgrade.
+  Requires mod_ssl installation.
+  Requires SELinux policy adjustment.
+
+Lessons Learned:
+  * mod_ssl is not installed by default settings
+  * PHP 8.0 is the default stream
+  * PHP 8.3 upgrade is straightforward with DNF modules
+  * SELinux is preventing automatic configuration writes until policy is adjusted
+  * Guild CMS correctly detected every one of these conditions.
+
+Scorecard:
+ Category				Result
+  OS Detection				✓
+  PHP Detection				✓
+  Database Detection			✓
+  Web Server Detection			✓
+  Security Detection			✓
+  Requirements				✓
+  Recommended Features Detection	✓
+  Configuration				✓ (after SELinux policy adjustment)
+  Overall Certification			PASS

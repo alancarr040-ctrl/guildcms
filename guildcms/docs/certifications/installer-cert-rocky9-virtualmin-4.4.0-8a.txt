@@ -1,0 +1,117 @@
+Installer Certification Report
+Platform: RockyLinux 9.8 with Virtualmin
+Revision: 1
+
+Certification Date: 2026-07-01
+Tester: Alan Carr
+
+Test Environment:
+  Virtual Machine: No
+  Clean Installation: No
+  Existing Production Server: Yes
+  Previous Guild CMS Installation: No
+
+Guild CMS Phase: 4.4 - Installation & Bootstrap System
+
+Platform Preparation
+---------------------
+None
+
+Get the files
+go into your domain folder (for a new server its /var/www/html/)
+  cd /var/www/html
+  sudo wget https://guildcms.theregs.org/downloads/guildcms.tar.gz
+
+Distribution: Distribution ID: rocky Version: 9.8
+  Package Manager: dnf
+  Kernel: 5.14.0-687.17.1.el9_8.x86_64
+  Detection Source: /etc/os-release
+
+Web Server: Reported Software: Apache
+  PHP SAPI: fpm-fcgi
+  Document Root: /home/theregs/domains/devsite.theregs.org/public_html
+
+PHP Runtime: PHP 8.5.7
+  PHP SAPI: fpm-fcgi
+  Effective PHP User: theregs
+  Effective PHP Group: theregs
+  Memory Limit: 32M
+  Upload Limit:2M
+  Post Limit:8M
+  Timezone: America/Detroit
+  Loaded php.ini
+      /etc/php.ini
+  Additional INI Files
+      /etc/php.d/10-opcache.ini, /etc/php.d/20-bcmath.ini, /etc/php.d/20-bz2.ini, /etc/php.d/20-calendar.ini, /etc/php.d/20-ctype.ini, /etc/php.d/20-curl.ini, /etc/php.d/20-dom.ini, /etc/php.d/20-exif.ini, /etc/php.d/20-fileinfo.ini, 
+      /etc/php.d/20-ftp.ini, /etc/php.d/20-gd.ini, /etc/php.d/20-gettext.ini, /etc/php.d/20-gmp.ini, /etc/php.d/20-iconv.ini, /etc/php.d/20-intl.ini, /etc/php.d/20-ldap.ini, /etc/php.d/20-mbstring.ini, /etc/php.d/20-mysqlnd.ini, 
+      /etc/php.d/20-pdo.ini, /etc/php.d/20-phar.ini, /etc/php.d/20-posix.ini, /etc/php.d/20-shmop.ini, /etc/php.d/20-simplexml.ini, /etc/php.d/20-soap.ini, /etc/php.d/20-sodium.ini, /etc/php.d/20-sqlite3.ini, /etc/php.d/20-sysvmsg.ini, 
+      /etc/php.d/20-sysvsem.ini, /etc/php.d/20-sysvshm.ini, /etc/php.d/20-tidy.ini, /etc/php.d/20-tokenizer.ini, /etc/php.d/20-xml.ini, /etc/php.d/20-xmlwriter.ini, /etc/php.d/20-xsl.ini, /etc/php.d/30-mysqli.ini, 
+      /etc/php.d/30-pdo_mysql.ini, /etc/php.d/30-pdo_sqlite.ini, /etc/php.d/30-xmlreader.ini, /etc/php.d/30-zip.ini, /etc/php.d/40-amqp.ini, /etc/php.d/40-apcu.ini, /etc/php.d/40-geos.ini, /etc/php.d/40-gnupg.ini, 
+      /etc/php.d/40-grpc.ini, /etc/php.d/40-igbinary.ini, /etc/php.d/40-imagick.ini, /etc/php.d/40-inotify.ini, /etc/php.d/40-mailparse.ini, /etc/php.d/40-maxminddb.ini, /etc/php.d/40-msgpack.ini, /etc/php.d/40-oauth.ini, 
+      /etc/php.d/40-rar.ini, /etc/php.d/40-rrd.ini, /etc/php.d/40-ssh2.ini, /etc/php.d/40-stats.ini, /etc/php.d/40-uploadprogress.ini, /etc/php.d/40-uuid.ini, /etc/php.d/40-yaml.ini, /etc/php.d/40-zmq.ini, /etc/php.d/50-memcached.ini, 
+      /etc/php.d/50-mysql.ini 
+
+Database:
+  MySQL: MySQLi: Available 
+  PDO MySQL: Available
+
+Includes:
+  Includes Path: /home/theregs/domains/devsite.theregs.org/public_html/includes
+  Config Target: /home/theregs/domains/devsite.theregs.org/public_html/includes/config.inc.php
+  Sample Config: /home/theregs/domains/devsite.theregs.org/public_html/includes/config.sample.inc.php
+  Directory Owner: theregs
+  Directory Group: theregs
+  Permissions
+    0755
+  Effective PHP User: theregs
+  Effective PHP Group: theregs
+  Configuration Exists: Yes
+  Sample Configuration Exists: Yes
+
+Security Context: HTTPS Detected
+  Server Port: 443
+  Forwarded Protocol: not provided
+  SELinux: Not detected
+  AppArmor: Not detected
+
+System Readiness: All passed
+Recommended Features: All passed
+
+Installer Accuracy
+  ✓ Distribution detected correctly
+  ✓ Package manager detected correctly
+  ✓ Document root detected correctly
+  ✓ PHP configuration detected correctly
+  ✓ Database extensions detected correctly
+  ✓ SELinux not detected
+  ✓ AppArmor not detected
+  ✓ HTTPS detected
+  ✓ Installer identified write permission issue correctly
+
+  No source compilation required.
+  No manual PHP compilation required.
+  No Guild CMS code modifications required.
+
+Certification Results:
+  Platform: RockyLinux 9.8 with Virtualmin
+  Installer Version: 4.4.0-8a
+  Status: Certified
+  Summary: Guild CMS installs successfully on RockyLinux 9.8 with Virtualmin.
+
+Notes:
+  No notes at this time
+
+Lessons Learned:
+  * Guild CMS successfully installed
+
+Scorecard:
+ Category				Result
+  OS Detection				✓
+  PHP Detection				✓
+  Database Detection			✓
+  Web Server Detection			✓
+  Security Detection			✓
+  Requirements				✓
+  Recommended Features Detection	✓
+  Configuration				✓ 
+  Overall Certification			PASS

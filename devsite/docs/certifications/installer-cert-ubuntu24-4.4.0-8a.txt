@@ -1,0 +1,109 @@
+Installer Certification Report
+Platform: Ubuntu 24 Minimal
+Revision: 1
+
+Certification Date: 2026-07-01
+Tester: Alan Carr
+
+Test Environment
+  Virtual Machine: Yes
+  Clean Installation: Yes
+  Existing Production Server: No
+  Previous Guild CMS Installation: No
+
+Guild CMS Phase: 4.4 - Installation & Bootstrap System 
+
+Platform Preparation
+--------------------
+Run the following commands:
+  sudo apt update
+  sudo apt install apache2 mariadb-server php php-cli php-fpm php-mysql php-gd php-mbstring php-xml php-curl php-zip php-intl unzip git -y
+
+Installation/Test Notes:
+  None
+
+Enable and Start Apache/PHP-FPM and MariaDB
+  sudo systemctl enable apache2 php-fpm mariadb
+  sudo systemctl start apache2 php-fpm mariadb
+
+Get the files
+go into your domain folder (for a new server its /var/www/html/)
+  cd /var/www/html
+  sudo wget https://guildcms.theregs.org/downloads/guildcms.tar.gz
+
+Distribution ID: ubuntu Version: 24.04
+  Package Manager: apt
+  Kernel: 6.8.0-124-generic
+  Detection Source: /etc/os-release
+
+Web Server:
+  Reported Software: Apache/2.4.58 (Ubuntu)
+  PHP SAPI: apache2handler
+  Document Root: /var/www/html
+
+PHP Runtime: 8.3.6
+  PHP SAPI: apache2handler
+  Effective PHP User: www-data
+  Effective PHP Group: www-data
+  Memory Limit: 128M
+  Upload Limit: 2M
+  Post Limit: 8M
+  Timezone: UTC
+  Loaded php.ini: /etc/php/8.3/apache2/php.ini
+  Additional INI Files
+    /etc/php/8.3/apache2/conf.d/10-mysqlnd.ini, /etc/php/8.3/apache2/conf.d/10-opcache.ini, /etc/php/8.3/apache2/conf.d/10-pdo.ini, /etc/php/8.3/apache2/conf.d/20-calendar.ini, /etc/php/8.3/apache2/conf.d/20-ctype.ini, 
+    /etc/php/8.3/apache2/conf.d/20-exif.ini, /etc/php/8.3/apache2/conf.d/20-ffi.ini, /etc/php/8.3/apache2/conf.d/20-fileinfo.ini, /etc/php/8.3/apache2/conf.d/20-ftp.ini, /etc/php/8.3/apache2/conf.d/20-gettext.ini, 
+    /etc/php/8.3/apache2/conf.d/20-iconv.ini, /etc/php/8.3/apache2/conf.d/20-mysqli.ini, /etc/php/8.3/apache2/conf.d/20-pdo_mysql.ini, /etc/php/8.3/apache2/conf.d/20-phar.ini, /etc/php/8.3/apache2/conf.d/20-posix.ini, 
+    /etc/php/8.3/apache2/conf.d/20-readline.ini, /etc/php/8.3/apache2/conf.d/20-shmop.ini, /etc/php/8.3/apache2/conf.d/20-sockets.ini, /etc/php/8.3/apache2/conf.d/20-sysvmsg.ini, /etc/php/8.3/apache2/conf.d/20-sysvsem.ini, 
+    /etc/php/8.3/apache2/conf.d/20-sysvshm.ini, /etc/php/8.3/apache2/conf.d/20-tokenizer.ini 
+
+Security Context: HTTPS Detected
+  Server Port: 443
+  Forwarded Protocol: not provided
+  SELinux: Not detected
+  AppArmor: Enabled
+
+System Readiness: All Passed
+Recommended Features: All Passed
+
+Installer Accuracy
+  ✓ Distribution detected correctly
+  ✓ Package manager detected correctly
+  ✓ Document root detected correctly
+  ✓ PHP configuration detected correctly
+  ✓ Database extensions detected correctly
+  ✓ AppArmor detected
+  ✓ HTTPS detected
+  ✓ Installer identified write permission issue correctly
+
+  No source compilation required.
+  No manual PHP compilation required.
+  No Guild CMS code modifications required.
+
+
+Certification Results:
+  Platform: Ubuntu 24 Minimal
+  Installer Version: 4.4.0-8a
+  Status: Certified
+  Summary: Guild CMS installs successfully on Ubuntu 24 Minimal.
+
+Notes:
+  No platform-specific configuration required
+
+Lessons Learned:
+  * Ubuntu provides one of the simplest installation experiences.
+  * PHP 8.3 is available by default.
+  * AppArmor is detected correctly.
+  * No platform-specific configuration changes were required.
+
+Scorecard:
+ Category				Result
+  OS Detection				✓
+  PHP Detection				✓
+  Database Detection			✓
+  Web Server Detection			✓
+  Security Detection			✓
+  Requirements				✓
+  Recommended Features Detection	✓
+  Configuration				✓ 
+  Overall Certification			PASS

@@ -109,14 +109,15 @@ $timeline = [
     ],
     [
         'label' => 'Phase 4.4',
-        'status' => 'active',
+        'status' => 'complete',
         'title' => 'Installation & Bootstrap System',
-        'body' => 'Phase 4.4 transforms the extracted devsite tree into the installable Guild CMS product. The roadmap has been refined to focus first on safe setup detection, product separation, installer framework expansion, requirements validation, database bootstrap, completion, and installer security review.',
+        'body' => 'Phase 4.4 established the Guild CMS installer framework, readiness checks, environment detection, platform intelligence, educational installer guidance, testing standards, release standards, and the first cross-platform installer certification milestone.',
         'points' => [
             'Confirmed devsite as the installable Guild CMS product tree.',
-            'Separated the Guild CMS public website from executable installer responsibilities.',
-            'Refined the remaining Phase 4.4 milestones before continuing implementation.',
-            'Prepared the next implementation package for setup detection and product separation preparation.',
+            'Published GCMS-ENG-011, GCMS-ENG-012, and GCMS-ENG-013 to formalize installer experience, testing, certification, development, and release standards.',
+            'Implemented environment detection and platform intelligence for operating system, package manager, PHP runtime, database support, document root, HTTPS, SELinux, and AppArmor visibility.',
+            'Completed Installer Certification Milestone 1 for Rocky Linux 9.8 + Virtualmin, Rocky Linux 9.8 Minimal, AlmaLinux 9.8 Minimal, Ubuntu 24 Minimal, and Debian 12 Minimal.',
+            'Prepared the project to begin Phase 4.5 Core Installation Experience.',
         ],
     ],
 ];

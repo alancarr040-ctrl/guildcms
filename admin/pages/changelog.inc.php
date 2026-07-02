@@ -8,6 +8,25 @@
 <section class="dev-center-section">
 
 
+    <article class="card bg-dark text-light border-success mb-4">
+        <div class="card-header">Package 4.4.0-9 &mdash; Installer Certification Milestone 1 Publication</div>
+        <div class="card-body">
+            <h2 class="h6">Added</h2>
+            <ul>
+                <li>Published Installer Certification Milestone 1 for Guild CMS Installer 4.4.0-8a.</li>
+                <li>Added certification reports for Rocky Linux 9.8 + Virtualmin, Rocky Linux 9.8 Minimal, AlmaLinux 9.8 Minimal, Ubuntu 24 Minimal, and Debian 12 Minimal.</li>
+                <li>Added standardized installer certification summary and certification report template.</li>
+                <li>Published public Engineering Library pages for GCMS-ENG-012, GCMS-ENG-013, and the certification milestone.</li>
+            </ul>
+            <h2 class="h6">Changed</h2>
+            <ul class="mb-0">
+                <li>Updated Development Center phase status, publication tracking, roadmap, timeline, journal, and changelog references for Phase 4.4 completion.</li>
+                <li>Updated public Guild CMS roadmap and timeline to prepare the transition to Phase 4.5.</li>
+            </ul>
+        </div>
+    </article>
+
+
     <article class="card bg-dark text-light border-info mb-4">
         <div class="card-header">Package 4.4.0-2b &mdash; Phase 4.4 Roadmap Refinement</div>
         <div class="card-body">

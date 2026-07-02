@@ -1,0 +1,36 @@
+Guild CMS Installer Certification Summary
+Installer Version: 4.4.0-8a
+Certification Date: 2026-07-01
+Milestone: Installer Certification Milestone 1 - Foundation Platforms
+Phase: 4.4 - Installation & Bootstrap System
+
+Certified Platforms
+
+PASS  Rocky Linux 9.8 + Virtualmin
+PASS  Rocky Linux 9.8 Minimal
+PASS  AlmaLinux 9.8 Minimal
+PASS  Ubuntu 24 Minimal
+PASS  Debian 12 Minimal
+
+Certification Coverage
+
+PASS  RHEL-family minimal installation behavior
+PASS  Debian-family minimal installation behavior
+PASS  Hosting-panel deployment behavior
+PASS  PHP runtime and SAPI detection
+PASS  Required database extension detection
+PASS  Recommended PHP feature detection
+PASS  HTTPS detection
+PASS  SELinux/AppArmor security context detection
+PASS  Configuration path and write readiness detection
+PASS  Diagnostic reporting for intentionally omitted recommended features
+
+Summary
+
+Guild CMS Installer 4.4.0-8a has successfully completed Foundation Platforms certification across representative RHEL-family and Debian-family environments. The installer correctly identified the operating environment, explained platform-specific requirements, distinguished required readiness checks from recommended features, and completed installation without Guild CMS source changes.
+
+Next Certification Targets
+
+Milestone 2: Nginx + PHP-FPM platforms
+Milestone 3: Docker-based regression and certification environments
+Future: Podman, reverse proxy, and additional deployment models when they introduce meaningful new risk

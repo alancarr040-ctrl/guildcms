@@ -128,3 +128,37 @@ Beginning with Package 4.4.0-8, the installer records an environment snapshot be
 - SELinux and AppArmor presence when visible to PHP
 
 The installer should use this information to teach the administrator what was found and to tailor later guidance without writing permanent configuration during detection.
+
+## Installer Certification Milestone 1 – Foundation Platforms
+
+Package 4.4.0-9 publishes the first completed Guild CMS installer certification milestone for Installer 4.4.0-8a.
+
+Certified platforms:
+
+- Rocky Linux 9.8 + Virtualmin – PASS
+- Rocky Linux 9.8 Minimal – PASS
+- AlmaLinux 9.8 Minimal – PASS
+- Ubuntu 24 Minimal – PASS
+- Debian 12 Minimal – PASS
+
+The milestone validates both functional installation and diagnostic behavior. Debian 12 was also used as a diagnostic validation scenario where recommended PHP extensions were intentionally omitted so the installer could prove that it detects and explains missing recommended components.
+
+Certification evidence is stored in `docs/certifications/` using the standardized Installer Certification Report format. These reports are plain-text engineering records intended to remain easy to review, diff, search, and include in future release packages.
+
+## Foundation Platform Findings
+
+- RHEL-family minimal installations require additional preparation for `mod_ssl`, administrator convenience tools, PHP stream selection, and SELinux write contexts.
+- Debian-family installations provide a straightforward Apache/PHP setup and AppArmor is detected when enabled.
+- Virtualmin deployments validate non-standard document roots, hosted-user ownership, PHP-FPM behavior, and existing hosting-panel configuration.
+- Guild CMS installer guidance should remain capability-based rather than hard-coded to narrow version numbers.
+- Future platform releases should be treated as expected-compatible when required capabilities remain available, but formal certification remains tied to tested installer versions.
+
+## Future Certification Milestones
+
+Future certification work should focus on deployment models that introduce new risk rather than testing every possible distribution combination.
+
+Planned future milestones:
+
+- Nginx + PHP-FPM certification on Ubuntu/Debian and Rocky Linux.
+- Docker-based regression and certification environments.
+- Podman, reverse proxy, and other advanced deployment models when they become project priorities.

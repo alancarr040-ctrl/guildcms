@@ -9,6 +9,16 @@
     <h1>Development Journal</h1>
 
 
+    <article class="card bg-dark text-light border-success mb-4">
+        <div class="card-header">July 2026 &mdash; Installer Certification Milestone 1 Published</div>
+        <div class="card-body">
+            <p>Package 4.4.0-9 publishes <strong>Installer Certification Milestone 1 &mdash; Foundation Platforms</strong> for Guild CMS Installer 4.4.0-8a.</p>
+            <p>The milestone certifies Rocky Linux 9.8 with Virtualmin, Rocky Linux 9.8 Minimal, AlmaLinux 9.8 Minimal, Ubuntu 24 Minimal, and Debian 12 Minimal using the standardized Installer Certification Report format.</p>
+            <p class="mb-0">This closes Phase 4.4 as a platform-intelligence and installer-certification phase and prepares Guild CMS to begin Phase 4.5 Core Installation Experience.</p>
+        </div>
+    </article>
+
+
     <article class="card bg-dark text-light border-info mb-4">
         <div class="card-header">June 2026 &mdash; Phase 4.4 Installer Roadmap Refined</div>
         <div class="card-body">

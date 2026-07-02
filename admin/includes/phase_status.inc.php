@@ -3,26 +3,26 @@
  * Guild CMS Development Center
  * Phase Status Definitions
  *
- * Package: 4.3.0-1 Development Center Realignment
+ * Package: 4.4.0-9 Installer Certification Milestone 1 Publication
  */
 
 defined('GUILD_CMS_DEV_CENTER') || define('GUILD_CMS_DEV_CENTER', true);
 
 $guildcms_current_phase = [
-    'phase' => '4.3',
-    'title' => 'Engineering Foundation & Governance',
-    'milestone' => '4.3.0',
-    'milestone_title' => 'Project Realignment',
-    'status' => 'Active',
-    'summary' => 'Guild CMS has entered the Engineering Foundation & Governance phase. This phase introduces engineering governance, project standards, and the public Engineering Library framework.',
+    'phase' => '4.4',
+    'title' => 'Installation & Bootstrap System',
+    'milestone' => '4.4.0-9',
+    'milestone_title' => 'Installer Certification Milestone 1 Publication',
+    'status' => 'Complete',
+    'summary' => 'Phase 4.4 is complete. Guild CMS has published Installer Certification Milestone 1 for the foundation platform set and is prepared to begin Phase 4.5 Core Installation Experience.',
 ];
 
 $guildcms_roadmap = [
     ['phase' => '4.1', 'title' => 'Security Foundation', 'state' => 'complete'],
     ['phase' => '4.2', 'title' => 'Security Hardening', 'state' => 'complete'],
     ['phase' => '4.3', 'title' => 'Engineering Foundation & Governance', 'state' => 'complete'],
-    ['phase' => '4.4', 'title' => 'Installation & Bootstrap System', 'state' => 'current'],
-    ['phase' => '4.5', 'title' => 'Data Normalization & Governance', 'state' => 'planned'],
+    ['phase' => '4.4', 'title' => 'Installation & Bootstrap System', 'state' => 'complete'],
+    ['phase' => '4.5', 'title' => 'Core Installation Experience', 'state' => 'current'],
     ['phase' => '4.6', 'title' => 'Upgrade & Migration Framework', 'state' => 'planned'],
     ['phase' => '5.0', 'title' => 'Plugin SDK & Extension Framework', 'state' => 'planned'],
     ['phase' => '5.1', 'title' => 'Theme Engine & Template System', 'state' => 'planned'],

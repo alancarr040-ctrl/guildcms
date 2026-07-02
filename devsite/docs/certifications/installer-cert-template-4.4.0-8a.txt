@@ -1,0 +1,113 @@
+Installer Certification Report
+Platform: 
+Revision: 
+
+Certification Date: YYYY-MM-DD
+Tester: 
+
+Test Environment
+  Virtual Machine: Yes/No
+  Clean Installation: Yes/No
+  Existing Production Server: Yes/No
+  Previous Guild CMS Installation: Yes/No
+  Additional Validation: None
+
+Guild CMS Phase: 4.4 - Installation & Bootstrap System 
+
+Platform Preparation
+--------------------
+Run the following commands:
+
+Installation/Test Notes:
+
+Enable and start Apache, PHP-FPM and MariaDB
+
+Now you might have an issue with your ssl cert as its self signed
+  https://yoursite/
+
+Get the files
+go into your domain folder (for a new server its /var/www/html/)
+  cd /var/www/html
+  sudo wget https://guildcms.theregs.org/downloads/guildcms.tar.gz
+
+Distribution ID: 
+  Package Manager: 
+  Kernel: 
+  Detection Source: 
+
+Web Server: 
+  Reported Software: 
+  PHP SAPI: 
+  Document Root: 
+
+PHP Runtime: 
+  PHP SAPI: 
+  Effective PHP User: 
+  Effective PHP Group: 
+  Memory Limit: 
+  Upload Limit: 
+  Post Limit: 
+  Timezone: 
+  Loaded php.ini: 
+  Additional INI Files
+    
+Database:
+  MySQLi: 
+  PDO MySQL: 
+
+Includes:
+  Includes Path: 
+  Config Target: 
+  Sample Config: 
+  Directory Owner: 
+  Directory Group: 
+  Permissions: 
+  Effective PHP User: 
+  Effective PHP Group: 
+  Configuration Exists: 
+  Sample Configuration Exists: 
+
+Security: HTTPS: 
+  Server Port: 
+  Forwarded Protocol: 
+  SELinux: 
+  AppArmor: 
+
+Installer Accuracy
+  ✓ ✗ Distribution detected correctly
+  ✓ ✗ Package manager detected correctly
+  ✓ ✗ Document root detected correctly
+  ✓ ✗ PHP configuration detected correctly
+  ✓ ✗ Database extensions detected correctly
+  ✓ ✗ SELinux detected
+  ✓ ✗ HTTPS detected
+  ✓ ✗ Installer identified write permission issue correctly
+
+  No source compilation required.
+  No manual PHP compilation required.
+  No Guild CMS code modifications required.
+
+SELinux Configuration:
+
+Certification Results:
+  Platform: 
+  Installer 
+  Status: Certified / Not Certified
+  Summary: 
+
+Notes:
+
+Lessons Learned:
+  * 
+
+Scorecard:
+ Category				Result
+  OS Detection				✓ ✗
+  PHP Detection				✓ ✗
+  Database Detection			✓ ✗
+  Web Server Detection			✓ ✗
+  Security Detection			✓ ✗
+  Requirements				✓ ✗
+  Recommended Features Detection	✓ ✗
+  Configuration				✓ ✗
+  Overall Certification			PASS/FAIL
